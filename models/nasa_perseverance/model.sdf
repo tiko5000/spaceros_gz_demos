@@ -125,19 +125,9 @@
           </cylinder>
         </geometry>
         <surface>
-          <contact>
-            <ode>
-              <kp>1e+07</kp>
-              <kd>1</kd>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>0.5</mu>
-              <mu2>1</mu2>
-              <slip1>0.00092</slip1>
-              <slip2>0</slip2>
-              <fdir1>0 0 1</fdir1>
             </ode>
           </friction>
         </surface>
@@ -182,19 +172,9 @@
           </cylinder>
         </geometry>
         <surface>
-          <contact>
-            <ode>
-              <kp>1e+07</kp>
-              <kd>1</kd>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>0.5</mu>
-              <mu2>1</mu2>
-              <slip1>0.00092</slip1>
-              <slip2>0</slip2>
-              <fdir1>0 0 1</fdir1>
             </ode>
           </friction>
         </surface>
@@ -239,19 +219,9 @@
           </cylinder>
         </geometry>
         <surface>
-          <contact>
-            <ode>
-              <kp>1e+07</kp>
-              <kd>1</kd>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>0.5</mu>
-              <mu2>1</mu2>
-              <slip1>0.00092</slip1>
-              <slip2>0</slip2>
-              <fdir1>0 0 1</fdir1>
             </ode>
           </friction>
         </surface>
@@ -296,19 +266,9 @@
           </cylinder>
         </geometry>
         <surface>
-          <contact>
-            <ode>
-              <kp>1e+07</kp>
-              <kd>1</kd>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>0.5</mu>
-              <mu2>1</mu2>
-              <slip1>0.00092</slip1>
-              <slip2>0</slip2>
-              <fdir1>0 0 1</fdir1>
             </ode>
           </friction>
         </surface>
@@ -353,19 +313,9 @@
           </cylinder>
         </geometry>
         <surface>
-          <contact>
-            <ode>
-              <kp>1e+07</kp>
-              <kd>1</kd>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>0.5</mu>
-              <mu2>1</mu2>
-              <slip1>0.00092</slip1>
-              <slip2>0</slip2>
-              <fdir1>0 0 1</fdir1>
             </ode>
           </friction>
         </surface>
@@ -410,19 +360,9 @@
           </cylinder>
         </geometry>
         <surface>
-          <contact>
-            <ode>
-              <kp>1e+07</kp>
-              <kd>1</kd>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>0.5</mu>
-              <mu2>1</mu2>
-              <slip1>0.00092</slip1>
-              <slip2>0</slip2>
-              <fdir1>0 0 1</fdir1>
             </ode>
           </friction>
         </surface>
