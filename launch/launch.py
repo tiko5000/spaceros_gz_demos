@@ -1,22 +1,37 @@
-from launch import LaunchDescription
-from launch_ros.actions import Node
-from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import PathJoinSubstitution
 from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import (DeclareLaunchArgument, SetEnvironmentVariable, 
+                            IncludeLaunchDescription, SetLaunchConfiguration)
+from launch.substitutions import PathJoinSubstitution, LaunchConfiguration, TextSubstitution
+from launch_ros.actions import Node
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 
 def generate_launch_description():
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
     pkg_spaceros_gz_sim = get_package_share_directory('spaceros_gz_sim')
     gz_launch_path = PathJoinSubstitution([pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py'])
-    moon_world_path = PathJoinSubstitution([pkg_spaceros_gz_sim, 'worlds', 'moon.sdf'])
+    gz_model_path = PathJoinSubstitution([pkg_spaceros_gz_sim, 'models'])
 
     return LaunchDescription([
-        SetEnvironmentVariable('GAZEBO_MODEL_PATH', PathJoinSubstitution([pkg_spaceros_gz_sim, 'models'])),
+        DeclareLaunchArgument(
+            'world',
+            default_value='moon',
+            choices=['moon', 'mars'],
+            description='World to load into Gazebo'
+        ),
+        SetLaunchConfiguration(name='world_file', 
+                               value=[LaunchConfiguration('world'), 
+                                      TextSubstitution(text='.sdf')]),
+        SetEnvironmentVariable('GAZEBO_MODEL_PATH', gz_model_path),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gz_launch_path),
-            launch_arguments={'gz_args': [moon_world_path], 'on_exit_shutdown': 'True'}.items()),
+            launch_arguments={
+                'gz_args': [PathJoinSubstitution([pkg_spaceros_gz_sim, 'worlds',
+                                                  LaunchConfiguration('world_file')])],
+                'on_exit_shutdown': 'True'
+            }.items(),
+        ),
         Node(
             package='ros_gz_bridge',
             executable='parameter_bridge',
