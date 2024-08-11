@@ -2,7 +2,7 @@
 <sdf version="1.6">
     <model name="martian_surface">
         <static>true</static>
-        <pose>5 0 4 0 0 0</pose>
+        <pose>-4 0 4 0 0 3.14</pose>
         <link name="base_link">
             <collision name="base_link_collision">
                 <geometry>
@@ -24,6 +24,35 @@
                         <uri>models://martian_surface/resources/martian_surface.dae</uri>
                     </mesh>
                 </geometry>
+            </visual>
+        </link>
+        <link name="ground_plane">
+            <pose>0 0 -6 0 0 0</pose>
+            <collision name="ground_plane_collision">
+                <geometry>
+                    <plane>
+                        <size>100 100</size>
+                    </plane>
+                </geometry>
+                <surface>
+                    <friction>
+                        <ode>
+                            <mu>0.5</mu>
+                        </ode>
+                    </friction>
+                </surface>
+            </collision>
+            <visual name="ground_plane_visual">
+                <geometry>
+                    <plane>
+                        <size>100 100</size>
+                    </plane>
+                </geometry>
+                <material>
+                    <ambient>0.5 0.3 0.1 1</ambient>
+                    <diffuse>0.5 0.3 0.1 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
             </visual>
         </link>
     </model>

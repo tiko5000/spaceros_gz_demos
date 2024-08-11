@@ -6,10 +6,9 @@
 
     <scene>
       <grid>false</grid>
-      <ambient>1.0 1.0 1.0</ambient>
-      <background>0.8 0.8 0.8</background>
+      <ambient>1.0 1.0 0.8</ambient>
+      <background>0.8 0.8 0.6</background>
     </scene>
-    
 
     <plugin
       filename="gz-sim-physics-system"
