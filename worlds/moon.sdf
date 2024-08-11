@@ -3,6 +3,9 @@
 <sdf version="1.9">
   <world name="moon">
     <gravity>0 0 -1.62</gravity>
+    <spherical_coordinates>
+      <surface_model>MOON_SCS</surface_model>
+    </spherical_coordinates>
 
     <scene>
       <ambient>0.0 0.0 0.0 0.0</ambient>
