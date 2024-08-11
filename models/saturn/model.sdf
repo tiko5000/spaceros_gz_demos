@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+    <model name="saturn">
+        <static>true</static>
+        <pose>690 70 180 -1.83 -0.21 0</pose>
+        <link name="base_link">
+            <collision name="base_link_collision">
+                <geometry>
+                    <mesh>
+                        <uri>models://saturn/resources/saturn.glb</uri>
+                        <scale>100 100 100</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+            <visual name="base_link_visual">
+                <geometry>
+                    <mesh>
+                        <uri>models://saturn/resources/saturn.glb</uri>
+                        <scale>100 100 100</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>

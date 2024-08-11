@@ -17,7 +17,7 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'world',
             default_value='moon',
-            choices=['moon', 'mars'],
+            choices=['moon', 'mars', 'enceladus'],
             description='World to load into Gazebo'
         ),
         SetLaunchConfiguration(name='world_file', 
