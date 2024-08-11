@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  <model name="nasa_ingenuity">
+	<pose>0 0 0 3.14 0 0</pose>
+	<link name="base_link"> </link>
+    <link name="Body_MHS_MainBody_v16">
+        <visual name="VisGeom_MHS_MainBody_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_MainBody_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </visual>
+        <collision name="ColGeom_MHS_MainBody_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_MainBody_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Body_MHS_TopBlades_v16">
+        <visual name="VisGeom_MHS_TopBlades_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_TopBlades_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </visual>
+        <collision name="ColGeom_MHS_TopBlades_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_TopBlades_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Body_MHS_BottomBlades_v16">
+        <visual name="VisGeom_MHS_BottomBlades_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_BottomBlades_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </visual>
+        <collision name="ColGeom_MHS_BottomBlades_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_BottomBlades_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Body_Joint_Leg02_Axis"> </link>
+
+    <link name="Body_MHS_Leg02_v16">
+        <visual name="VisGeom_MHS_Leg02_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_Leg02_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </visual>
+        <collision name="ColGeom_MHS_Leg02_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_Leg02_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Body_Joint_Leg01_Axis"> </link>
+
+    <link name="Body_MHS_Leg01_v16">
+        <visual name="VisGeom_MHS_Leg01_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_Leg01_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </visual>
+        <collision name="ColGeom_MHS_Leg01_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_Leg01_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Body_Joint_Leg03_Axis"> </link>
+
+    <link name="Body_MHS_Leg03_v16">
+        <visual name="VisGeom_MHS_Leg03_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_Leg03_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </visual>
+        <collision name="ColGeom_MHS_Leg03_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_Leg03_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="Body_Joint_Leg04_Axis"> </link>
+
+    <link name="Body_MHS_Leg04_v16">
+        <visual name="VisGeom_MHS_Leg04_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_Leg04_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </visual>
+        <collision name="ColGeom_MHS_Leg04_v16">
+            <geometry>
+                <mesh>
+                    <uri>model://nasa_ingenuity/meshes/MHS_Leg04_v16.glb</uri>
+                </mesh>
+            </geometry>
+        </collision>
+    </link>
+
+	<link name="Frame_MHS_NAVCAM"> </link>
+
+    <joint name="MHS_MainBody_v16" type="fixed">
+        <parent>base_link</parent>
+        <child>Body_MHS_MainBody_v16</child>
+    </joint>
+    
+    <joint name="MHS_TopBlades_v16" type="revolute">
+        <parent>Body_MHS_MainBody_v16</parent>
+        <child>Body_MHS_TopBlades_v16</child>
+        <axis>
+            <xyz>0 0 1</xyz>
+        </axis>
+    </joint>
+    
+    <joint name="MHS_BottomBlades_v16" type="revolute">
+        <pose>0 0 0 0 0 0.994839</pose>
+        <parent>Body_MHS_MainBody_v16</parent>
+        <child>Body_MHS_BottomBlades_v16</child>
+        <axis>
+            <xyz>0 0 1</xyz>
+        </axis>
+    </joint>
+    
+    <joint name="Joint_Leg02_Axis" type="revolute">
+        <pose>0.0799965 0.0899998 0.013566 0.0338305 0.721918 0.0511692</pose>
+        <parent>Body_MHS_MainBody_v16</parent>
+        <child>Body_Joint_Leg02_Axis</child>
+        <axis>
+            <xyz>-1 0 0</xyz>
+        </axis>
+    </joint>
+    
+    <joint name="MHS_Leg02_v16" type="fixed">
+        <pose>0.0544521 0.0879744 0.0630787 1.11631e09 0.722567 0.0383972</pose>
+        <parent>Body_Joint_Leg02_Axis</parent>
+        <child>Body_MHS_Leg02_v16</child>
+    </joint>
+    
+    <joint name="Joint_Leg01_Axis" type="revolute">
+        <pose>0.0804546 0.0897671 0.013368 0.180504 0.364465 0.473174</pose>
+        <parent>Body_MHS_MainBody_v16</parent>
+        <child>Body_Joint_Leg01_Axis</child>
+        <axis>
+            <xyz>-1 0 0</xyz>
+        </axis>
+    </joint>
+    
+    <joint name="MHS_Leg01_v16" type="fixed">
+        <pose>0.0239246 0.110467 0.0439815 -5.70219e08 0.404917 0.439824</pose>
+        <parent>Body_Joint_Leg01_Axis</parent>
+        <child>Body_MHS_Leg01_v16</child>
+    </joint>
+    
+    <joint name="Joint_Leg03_Axis" type="revolute">
+        <pose>0.0799965 0.0899998 0.013566 0.0338306 0.721918 0.0511692</pose>
+        <parent>Body_MHS_MainBody_v16</parent>
+        <child>Body_Joint_Leg03_Axis</child>
+        <axis>
+            <xyz>-1 0 0</xyz>
+        </axis>
+    </joint>
+    
+    <joint name="MHS_Leg03_v16" type="fixed">
+        <pose>0.0544521 0.0879744 0.0630787 9.26579e09 0.722567 0.0383972</pose>
+        <parent>Body_Joint_Leg03_Axis</parent>
+        <child>Body_MHS_Leg03_v16</child>
+    </joint>
+    
+    <joint name="Joint_Leg04_Axis" type="revolute">
+        <pose>0.0804546 0.0898284 0.013315 6.77871e07 0.460765 0.364774</pose>
+        <parent>Body_MHS_MainBody_v16</parent>
+        <child>Body_Joint_Leg04_Axis</child>
+        <axis>
+            <xyz>-1 0 0</xyz>
+        </axis>
+    </joint>
+    
+    <joint name="MHS_Leg04_v16" type="fixed">
+        <pose>0.032699 0.112619 0.0310971 0.175269 0.428359 0.402991</pose>
+        <parent>Body_Joint_Leg04_Axis</parent>
+        <child>Body_MHS_Leg04_v16</child>
+    </joint>
+    
+    <joint name="MHS_NAVCAM" type="fixed">
+        <pose>0.0 0.0616891 0.13743 0.0027478 0.0580433 -1.57391594</pose>
+        <parent>Body_MHS_MainBody_v16</parent>
+        <child>Frame_MHS_NAVCAM</child>
+    </joint>
+
+	</model>
+</sdf>
