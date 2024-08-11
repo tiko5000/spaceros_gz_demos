@@ -38,11 +38,11 @@
     </light>
 
     <include>
-      <uri> https://fuel.gazebosim.org/1.0/OpenRobotics/models/Moon DEM </uri>
+      <uri> lunar_surface </uri>
     </include>
 
     <include>
-      <uri> https://fuel.gazebosim.org/1.0/OpenRobotics/models/bosdyn_spot </uri>
+      <uri> bosdyn_spot </uri>
     </include>
 
   </world>

@@ -23,7 +23,7 @@ def generate_launch_description():
         SetLaunchConfiguration(name='world_file', 
                                value=[LaunchConfiguration('world'), 
                                       TextSubstitution(text='.sdf')]),
-        SetEnvironmentVariable('GAZEBO_MODEL_PATH', gz_model_path),
+        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', gz_model_path),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gz_launch_path),
             launch_arguments={

@@ -38,11 +38,11 @@
     </light>
 
     <include>
-      <uri> https://fuel.gazebosim.org/1.0/OpenRobotics/models/Moon DEM </uri>
+      <uri> lunar_surface </uri>
     </include>
 
     <include>
-      <uri> https://fuel.gazebosim.org/1.0/peci1/models/NASA_PRESERVERANCE_SENSOR_CONFIG_1 </uri>
+      <uri> nasa_perseverance </uri>
     </include>
 
   </world>
