@@ -44,9 +44,5 @@
       <uri> lunar_surface </uri>
     </include>
 
-    <include>
-      <uri> bosdyn_spot </uri>
-    </include>
-
   </world>
 </sdf>
