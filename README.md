@@ -5,6 +5,10 @@ Build the docker image locally with
 
 `docker build . --tag "spaceros_gz_sim"`
 
-Then run the image in an interactive terminal with
+Then run the image in an interactive terminal, first
 
-`docker run -it spaceros_gz_sim:latest`
+`xhost +local:docker`
+
+then
+
+`docker run -it --network host -e DISPLAY -e QT_X11_NO_MITSHM=1 --device /dev/dri spaceros_gz_sim:latest`
