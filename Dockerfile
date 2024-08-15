@@ -70,3 +70,11 @@ RUN yes | sudo apt-get install ros-humble-rviz2
 
 # https://gazebosim.org/docs/latest/ros_installation/
 RUN yes | sudo apt-get install ros-humble-ros-gzharmonic
+
+# Copy the entrypoint script into the container
+COPY ./entrypoint.sh /home/spaceros-user/spaceros/entrypoint.sh
+
+# Ensure the entrypoint script is executable
+RUN sudo chmod +x /home/spaceros-user/spaceros/entrypoint.sh
+
+ENTRYPOINT ["/home/spaceros-user/spaceros/entrypoint.sh"]

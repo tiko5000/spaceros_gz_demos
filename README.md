@@ -5,10 +5,10 @@ Build the docker image locally with
 
 `docker build . --tag "spaceros_gz_sim"`
 
-Then run the image in an interactive terminal, first
+Then run the image with
 
-`xhost +local:docker`
+`./scripts/docker_run.sh`
 
-then
+You may have to run `xhost +local:docker` on your first time. 
 
-`docker run -it --network host -e DISPLAY -e QT_X11_NO_MITSHM=1 --device /dev/dri spaceros_gz_sim:latest`
+Once in the docker container, you can run `ros2` commands as well as use gui tools like `rviz2` and `gz sim`.
