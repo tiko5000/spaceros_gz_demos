@@ -27,6 +27,11 @@
       filename="gz-sim-scene-broadcaster-system"
       name="gz::sim::systems::SceneBroadcaster">
     </plugin>
+    <plugin
+      filename="gz-sim-buoyancy-system"
+      name="gz::sim::systems::Buoyancy">
+      <uniform_fluid_density>1000</uniform_fluid_density>
+    </plugin>
 
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
@@ -49,7 +54,9 @@
       <uri> saturn </uri>
     </include>
 
-    <!-- include submersible -->
+    <include>
+      <uri> submarine </uri>
+    </include>
 
   </world>
 </sdf>
