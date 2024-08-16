@@ -1,6 +1,8 @@
 # spaceros_gz_sim
 
 ## Docker setup
+If you don't have docker, install it with `sudo apt install docker.io`. If you get a permission denied error with the Docker daemon, you will have to add yourself to the docker user group with `sudo usermod -aG docker $USER`, then run `newgrp docker`. You will need to log out and log back in for these changes to take effect on your system.
+
 Build the docker image locally with
 
 `docker build . --tag "spaceros_gz_sim"`
