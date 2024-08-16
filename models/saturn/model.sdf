@@ -4,14 +4,6 @@
         <static>true</static>
         <pose>1200 200 180 -1.83 -0.17 0</pose>
         <link name="base_link">
-            <collision name="base_link_collision">
-                <geometry>
-                    <mesh>
-                        <uri>models://saturn/resources/saturn.glb</uri>
-                        <scale>400 400 400</scale>
-                    </mesh>
-                </geometry>
-            </collision>
             <visual name="base_link_visual">
                 <geometry>
                     <mesh>
