@@ -1,4 +1,4 @@
-material youbot/Orange
+material youBot/Orange
 {
   receive_shadows on
   technique
@@ -14,7 +14,7 @@ material youbot/Orange
   }
 }
 
-material youbot/DarkGrey
+material youBot/DarkGrey
 {
   receive_shadows on
 
@@ -30,7 +30,7 @@ material youbot/DarkGrey
   }
 }
 
-material youbot/Grey
+material youBot/Grey
 {
   receive_shadows on
 

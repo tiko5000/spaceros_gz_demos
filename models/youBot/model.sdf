@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <model name="youbot">
-    <pose>0 0 0.09 0 0 0</pose>
+  <model name="youBot">
+    <self_collide>1</self_collide>
+    <pose>-5 0 4.8 0 0 1.8</pose>
     <link name="base_footprint">
       <pose>0 0 0 0 0 0</pose>
       <inertial>
@@ -80,7 +81,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/base/base_convex.stl</uri>
+            <uri>model://youBot/meshes/base/base_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -114,7 +115,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/base/base.dae</uri>
+            <uri>model://youBot/meshes/base/base.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -140,7 +141,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm0_convex.stl</uri>
+            <uri>model://youBot/meshes/arm/arm0_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -174,13 +175,13 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm0.dae</uri>
+            <uri>model://youBot/meshes/arm/arm0.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://youbot/materials/scripts/youbot.material</uri>
-            <name>youbot/DarkGrey</name>
+            <uri>model://youBot/materials/scripts/youBot.material</uri>
+            <name>youBot/DarkGrey</name>
           </script>
         </material>
       </visual>
@@ -206,7 +207,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm1_convex.stl</uri>
+            <uri>model://youBot/meshes/arm/arm1_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -240,7 +241,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm1.dae</uri>
+            <uri>model://youBot/meshes/arm/arm1.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -266,7 +267,7 @@
         <pose>0 -0.032000 0.078000 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm2_convex.stl</uri>
+            <uri>model://youBot/meshes/arm/arm2_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -300,7 +301,7 @@
         <pose>0 -0.032000 0.078000 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm2.dae</uri>
+            <uri>model://youBot/meshes/arm/arm2.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -326,7 +327,7 @@
         <pose>0 0.028000 0.079000 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm3_convex.stl</uri>
+            <uri>model://youBot/meshes/arm/arm3_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -360,7 +361,7 @@
         <pose>0 0.028000 0.079000 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm3.dae</uri>
+            <uri>model://youBot/meshes/arm/arm3.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -386,7 +387,7 @@
         <pose>0 -0.010000 0.029000 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm4_convex.stl</uri>
+            <uri>model://youBot/meshes/arm/arm4_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -420,7 +421,7 @@
         <pose>0 -0.010000 0.029000 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm4.dae</uri>
+            <uri>model://youBot/meshes/arm/arm4.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -446,7 +447,7 @@
         <pose>0.003000 0 -0.034000 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm5_convex.stl</uri>
+            <uri>model://youBot/meshes/arm/arm5_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -471,7 +472,7 @@
         <pose>0.003000 0 -0.034000 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/arm/arm5.dae</uri>
+            <uri>model://youBot/meshes/arm/arm5.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -497,7 +498,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/gripper/palm_convex.stl</uri>
+            <uri>model://youBot/meshes/gripper/palm_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -531,14 +532,13 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/gripper/palm.stl</uri>
+            <uri>model://youBot/meshes/gripper/palm.stl</uri>
           </mesh>
         </geometry>
         <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Black</name>
-          </script>
+          <ambient>0.000000 0.000000 0.000000 1</ambient>
+          <diffuse>0.000000 0.000000 0.000000 1</diffuse>
+          <specular>0.000000 0.000000 0.000000 1</specular>
         </material>
       </visual>
       <gravity>1</gravity>
@@ -563,7 +563,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/gripper/finger_convex.stl</uri>
+            <uri>model://youBot/meshes/gripper/finger_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -588,9 +588,14 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/gripper/finger.stl</uri>
+            <uri>model://youBot/meshes/gripper/finger.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.000000 0.000000 0.000000 1</ambient>
+          <diffuse>0.000000 0.000000 0.000000 1</diffuse>
+          <specular>0.000000 0.000000 0.000000 1</specular>
+        </material>
       </visual>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -614,7 +619,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/gripper/finger_convex.stl</uri>
+            <uri>model://youBot/meshes/gripper/finger_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -639,9 +644,14 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/gripper/finger.stl</uri>
+            <uri>model://youBot/meshes/gripper/finger.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <ambient>0.000000 0.000000 0.000000 1</ambient>
+          <diffuse>0.000000 0.000000 0.000000 1</diffuse>
+          <specular>0.000000 0.000000 0.000000 1</specular>
+        </material>
       </visual>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -665,7 +675,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://hokuyo/meshes/hokuyo_convex.stl</uri>
+            <uri>model://hokuyo/meshes/hokuyo_utm30lx.dae</uri>
           </mesh>
         </geometry>
         <surface>
@@ -690,7 +700,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://hokuyo/meshes/hokuyo.dae</uri>
+            <uri>model://hokuyo/meshes/hokuyo_utm30lx.dae</uri>
           </mesh>
         </geometry>
       </visual>
@@ -781,13 +791,13 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/base/back-left_wheel.dae</uri>
+            <uri>model://youBot/meshes/base/back-left_wheel.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://youbot/materials/scripts/youbot.material</uri>
-            <name>youbot/Orange</name>
+            <uri>model://youBot/materials/scripts/youBot.material</uri>
+            <name>youBot/Orange</name>
           </script>
         </material>
       </visual>
@@ -857,13 +867,13 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/base/back-right_wheel.dae</uri>
+            <uri>model://youBot/meshes/base/back-right_wheel.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://youbot/materials/scripts/youbot.material</uri>
-            <name>youbot/Orange</name>
+            <uri>model://youBot/materials/scripts/youBot.material</uri>
+            <name>youBot/Orange</name>
           </script>
         </material>
       </visual>
@@ -933,13 +943,13 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/base/front-left_wheel.dae</uri>
+            <uri>model://youBot/meshes/base/front-left_wheel.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://youbot/materials/scripts/youbot.material</uri>
-            <name>youbot/Orange</name>
+            <uri>model://youBot/materials/scripts/youBot.material</uri>
+            <name>youBot/Orange</name>
           </script>
         </material>
       </visual>
@@ -1009,13 +1019,13 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/base/front-right_wheel.dae</uri>
+            <uri>model://youBot/meshes/base/front-right_wheel.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://youbot/materials/scripts/youbot.material</uri>
-            <name>youbot/Orange</name>
+            <uri>model://youBot/materials/scripts/youBot.material</uri>
+            <name>youBot/Orange</name>
           </script>
         </material>
       </visual>
@@ -1041,7 +1051,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/plate/plate_convex.stl</uri>
+            <uri>model://youBot/meshes/plate/plate_convex.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -1066,7 +1076,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://youbot/meshes/plate/plate.dae</uri>
+            <uri>model://youBot/meshes/plate/plate.dae</uri>
           </mesh>
         </geometry>
       </visual>
