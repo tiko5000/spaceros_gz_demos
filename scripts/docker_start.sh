@@ -1,3 +1,4 @@
+#!/bin/bash
 docker run -it \
   --network host \
   -e DISPLAY \
