@@ -5,7 +5,7 @@ If you don't have docker, install it with `sudo apt install docker.io`. If you g
 
 Build the docker image locally with
 
-`./scripts/docker_run.sh`
+`./scripts/docker_build.sh`
 
 Then start the container with
 
