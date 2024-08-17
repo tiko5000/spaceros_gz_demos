@@ -14,28 +14,15 @@ RUN sudo apt-get update \
         bash-completion \
         build-essential \
         cmake \
-        curl \
         git \
-        htop \
-        iputils-ping \
-        mesa-utils \
-        net-tools \
         python-is-python3 \
         python3-pip \
-        unzip \
-        vim \
-        wget \
+        ripgrep \
+        ros-humble-rviz2 \
+        ros-humble-ros-gzharmonic \
     && sudo apt-get autoremove -y 
 
-RUN yes | sudo apt-get install ros-humble-rviz2
-
-# https://gazebosim.org/docs/latest/ros_installation/
-RUN yes | sudo apt-get install ros-humble-ros-gzharmonic
-
-# # Copy the entrypoint script into the container
-# COPY ./entrypoint.sh /home/spaceros-user/spaceros/entrypoint.sh
-
-# # Ensure the entrypoint script is executable
-# RUN sudo chmod +x /home/spaceros-user/spaceros/entrypoint.sh
-
-# ENTRYPOINT ["/home/spaceros-user/spaceros/entrypoint.sh"]
+# Replace old entrypoint with current entrypoint that extends upon it
+RUN sudo mv /ros_entrypoint.sh /old_entrypoint.sh
+COPY ./entrypoint.sh /ros_entrypoint.sh
+RUN sudo chmod +x /ros_entrypoint.sh
