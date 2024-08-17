@@ -1,6 +1,13 @@
 #!/bin/bash
 source /opt/ros/humble/setup.bash
 
+set -e
+
+# Setup the Space ROS environment
+source "${SPACEROS_DIR}/install/setup.bash"
+export IKOS_SCAN_NOTIFIER_FILES="" # make ikos create .ikosbin files for compiled packages
+
+
 echo "                                         _.oo.   "
 echo "                 _.u[[/;:,.         .odMMMMMM'   "
 echo "              .o888UU[[[/;:-.  .o@P^    MMM^     "
@@ -18,9 +25,5 @@ echo "YMMMUP^                                          "
 echo " ^^                                              "
 echo "                   Welcome!                      "
 
-# If no command is specified, open an interactive shell
-if [ "$#" -eq 0 ]; then
-    exec /bin/bash
-else
-    exec "$@"
-fi
+
+exec "$@"
