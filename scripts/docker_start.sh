@@ -6,4 +6,5 @@ docker run -it \
   -e TERM \
   -e QT_X11_NO_MITSHM=1 \
   --device /dev/dri \
+  --mount type=bind,source="$(pwd)",target=/home/spaceros-user/spaceros/ws/src/spaceros_gz_sim \
   spaceros_gz_sim:latest
