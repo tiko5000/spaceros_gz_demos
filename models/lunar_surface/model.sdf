@@ -12,6 +12,13 @@
             <pos>0 0 209</pos>
           </heightmap>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>50</mu>
+            </ode>
+          </friction>
+        </surface>
       </collision>
       <visual name="visual">
         <geometry>

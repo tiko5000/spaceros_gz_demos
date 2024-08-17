@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <model name="youBot">
+    <!-- gz topic -t "/model/youBot/cmd_vel" -m gz.msgs.Twist -p "linear: {y: 1.5}, angular: {z: 1.2}" -->
     <self_collide>1</self_collide>
     <pose>-5 0 4.8 0 0 1.8</pose>
     <link name="base_footprint">
@@ -766,6 +767,13 @@
               <min_depth>0</min_depth>
             </ode>
           </contact>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>0.0</mu2>
+              <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
+            </ode>
+          </friction>
         </surface>
         <laser_retro>0</laser_retro>
       </collision>
@@ -824,6 +832,13 @@
               <min_depth>0</min_depth>
             </ode>
           </contact>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>0.0</mu2>
+              <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
+            </ode>
+          </friction>
         </surface>
         <laser_retro>0</laser_retro>
       </collision>
@@ -882,6 +897,13 @@
               <min_depth>0</min_depth>
             </ode>
           </contact>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>0.0</mu2>
+              <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
+            </ode>
+          </friction>
         </surface>
         <laser_retro>0</laser_retro>
       </collision>
@@ -940,6 +962,13 @@
               <min_depth>0</min_depth>
             </ode>
           </contact>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>0.0</mu2>
+              <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
+            </ode>
+          </friction>
         </surface>
         <laser_retro>0</laser_retro>
       </collision>
@@ -1310,9 +1339,9 @@
       <front_right_joint>wheel_joint_fr</front_right_joint>
       <back_left_joint>wheel_joint_rl</back_left_joint>
       <back_right_joint>wheel_joint_rr</back_right_joint>
-      <wheel_separation>1.25</wheel_separation>
-      <wheelbase>1.511</wheelbase>
-      <wheel_radius>0.3</wheel_radius>
+      <wheel_separation>0.316</wheel_separation>
+      <wheelbase>0.456</wheelbase>
+      <wheel_radius>0.05</wheel_radius>
       <min_acceleration>-5</min_acceleration>
       <max_acceleration>5</max_acceleration>
     </plugin>
