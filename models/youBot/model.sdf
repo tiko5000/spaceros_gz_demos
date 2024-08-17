@@ -25,31 +25,6 @@
             <size>0.001000 0.001000 0.001000</size>
           </box>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>0</mu>
-              <mu2>0</mu2>
-              <fdir1>0 0 0</fdir1>
-              <slip1>0</slip1>
-              <slip2>0</slip2>
-            </ode>
-          </friction>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="base_footprint_geom_visual">
@@ -85,31 +60,6 @@
             <uri>model://youBot/meshes/base/base_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>0</mu>
-              <mu2>0</mu2>
-              <fdir1>0 0 0</fdir1>
-              <slip1>0</slip1>
-              <slip2>0</slip2>
-            </ode>
-          </friction>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="base_link_geom_visual">
@@ -145,31 +95,6 @@
             <uri>model://youBot/meshes/arm/arm0_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>0</mu>
-              <mu2>0</mu2>
-              <fdir1>0 0 0</fdir1>
-              <slip1>0</slip1>
-              <slip2>0</slip2>
-            </ode>
-          </friction>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="arm_link_0_geom_visual">
@@ -211,31 +136,6 @@
             <uri>model://youBot/meshes/arm/arm1_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>0</mu>
-              <mu2>0</mu2>
-              <fdir1>0 0 0</fdir1>
-              <slip1>0</slip1>
-              <slip2>0</slip2>
-            </ode>
-          </friction>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="arm_link_1_geom_visual">
@@ -271,31 +171,6 @@
             <uri>model://youBot/meshes/arm/arm2_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>0</mu>
-              <mu2>0</mu2>
-              <fdir1>0 0 0</fdir1>
-              <slip1>0</slip1>
-              <slip2>0</slip2>
-            </ode>
-          </friction>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="arm_link_2_geom_visual">
@@ -331,31 +206,6 @@
             <uri>model://youBot/meshes/arm/arm3_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>0</mu>
-              <mu2>0</mu2>
-              <fdir1>0 0 0</fdir1>
-              <slip1>0</slip1>
-              <slip2>0</slip2>
-            </ode>
-          </friction>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="arm_link_3_geom_visual">
@@ -391,31 +241,6 @@
             <uri>model://youBot/meshes/arm/arm4_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>0</mu>
-              <mu2>0</mu2>
-              <fdir1>0 0 0</fdir1>
-              <slip1>0</slip1>
-              <slip2>0</slip2>
-            </ode>
-          </friction>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="arm_link_4_geom_visual">
@@ -451,22 +276,6 @@
             <uri>model://youBot/meshes/arm/arm5_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="arm_link_5_geom_visual">
@@ -502,31 +311,6 @@
             <uri>model://youBot/meshes/gripper/palm_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>0</mu>
-              <mu2>0</mu2>
-              <fdir1>0 0 0</fdir1>
-              <slip1>0</slip1>
-              <slip2>0</slip2>
-            </ode>
-          </friction>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="gripper_palm_link_geom_visual">
@@ -567,22 +351,6 @@
             <uri>model://youBot/meshes/gripper/finger_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="gripper_finger_link_l_geom_visual">
@@ -623,22 +391,6 @@
             <uri>model://youBot/meshes/gripper/finger_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="gripper_finger_link_r_geom_visual">
@@ -679,22 +431,6 @@
             <uri>model://hokuyo/meshes/hokuyo_utm30lx.dae</uri>
           </mesh>
         </geometry>
-        <surface>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="base_laser_front_link_geom_visual">
@@ -753,20 +489,6 @@
           </cylinder>
         </geometry>
         <surface>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>1.0</mu>
@@ -818,20 +540,6 @@
           </cylinder>
         </geometry>
         <surface>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>1.0</mu>
@@ -883,20 +591,6 @@
           </cylinder>
         </geometry>
         <surface>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>1.0</mu>
@@ -948,20 +642,6 @@
           </cylinder>
         </geometry>
         <surface>
-          <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
           <friction>
             <ode>
               <mu>1.0</mu>
@@ -1011,22 +691,6 @@
             <uri>model://youBot/meshes/plate/plate_convex.stl</uri>
           </mesh>
         </geometry>
-        <surface>
-        <bounce>
-            <restitution_coefficient>0</restitution_coefficient>
-            <threshold>0</threshold>
-          </bounce>
-          <contact>
-            <ode>
-              <soft_cfm>0</soft_cfm>
-              <soft_erp>0.200000</soft_erp>
-              <kp>10000000000000.000000</kp>
-              <kd>100000000000.000000</kd>
-              <max_vel>-1</max_vel>
-              <min_depth>0</min_depth>
-            </ode>
-          </contact>
-        </surface>
         <laser_retro>0</laser_retro>
       </collision>
       <visual name="plate_link_geom_visual">
