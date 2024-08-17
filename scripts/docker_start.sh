@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Starting docker container..."
 docker run -it \
   --network host \
   -e DISPLAY \
