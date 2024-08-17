@@ -16,3 +16,10 @@ Once in the docker container, you can run `ros2` commands as well as use gui too
 Once you have a running container, to get another shell, run 
 
 `./scripts/docker_shell.sh`
+
+### Running inside of the docker
+1. Once you are in the docker container, run `colcon build` (you should be in the `~/spaceros/ws` directory)
+
+2. Run `source install/setup.bash`
+
+3. Start the demo with `ros2 launch spaceros_gz_sim launch.py`
