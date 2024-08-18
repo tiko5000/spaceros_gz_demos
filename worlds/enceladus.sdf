@@ -46,6 +46,23 @@
       <visualize>false</visualize>
     </light>
 
+    <!-- Invisible top plane to keep boat from flying out of water -->
+    <!-- Graded buoyancy plugin doesn't work well enough -->
+    <model name="top_collision_plane">
+      <static>true</static>
+      <pose>0 0 2 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>1000 1000</size>
+            </plane>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
     <include>
       <uri> ocean_surface </uri>
     </include>
