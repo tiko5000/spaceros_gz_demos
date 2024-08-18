@@ -4,6 +4,17 @@
 	<pose>0 -2.5 -0.5 3.14 0 0</pose>
 	<link name="base_link"> </link>
     <link name="Body_MHS_MainBody_v16">
+        <inertial name="Inertial_MHS_MainBody_v16">
+            <mass>2</mass>
+            <inertia>
+                <ixx>0.5</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.5</iyy>
+                <iyz>0</iyz>
+                <izz>0.5</izz>
+            </inertia>
+        </inertial>
         <visual name="VisGeom_MHS_MainBody_v16">
             <geometry>
                 <mesh>
