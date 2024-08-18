@@ -388,6 +388,27 @@
         filename="gz-sim-odometry-publisher-system"
         name="gz::sim::systems::OdometryPublisher">
     </plugin>
+    <plugin
+      filename="gz-sim-diff-drive-system"
+      name="gz::sim::systems::DiffDrive">
+      <left_joint>left_wheel3_j</left_joint>
+      <right_joint>right_wheel3_j</right_joint>
+      <wheel_separation>2.14</wheel_separation>
+      <wheel_radius>0.27</wheel_radius>
+      <max_linear_acceleration>101</max_linear_acceleration>
+      <min_linear_acceleration>-101</min_linear_acceleration>
+      <max_angular_acceleration>120</max_angular_acceleration>
+      <min_angular_acceleration>-102</min_angular_acceleration>
+      <max_linear_velocity>100.5</max_linear_velocity>
+      <min_linear_velocity>-100.5</min_linear_velocity>
+      <max_angular_velocity>101</max_angular_velocity>
+      <min_angular_velocity>-110</min_angular_velocity>
+    </plugin>
+
+    <plugin
+      filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher">
+    </plugin>
   </model>
 </sdf>
 
