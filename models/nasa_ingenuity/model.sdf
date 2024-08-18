@@ -220,5 +220,10 @@
         <child>Frame_MHS_NAVCAM</child>
     </joint>
 
+    <plugin
+        filename="gz-sim-odometry-publisher-system"
+        name="gz::sim::systems::OdometryPublisher">
+    </plugin>
+
 	</model>
 </sdf>

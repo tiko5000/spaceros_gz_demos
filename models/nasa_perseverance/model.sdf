@@ -384,6 +384,10 @@
         <use_parent_model_frame>0</use_parent_model_frame>
       </axis>
     </joint>
+    <plugin
+        filename="gz-sim-odometry-publisher-system"
+        name="gz::sim::systems::OdometryPublisher">
+    </plugin>
   </model>
 </sdf>
 

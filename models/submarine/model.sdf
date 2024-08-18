@@ -71,4 +71,8 @@
         <min_thrust_cmd>0</min_thrust_cmd>
       </plugin>
     </model>
+    <plugin
+        filename="gz-sim-odometry-publisher-system"
+        name="gz::sim::systems::OdometryPublisher">
+    </plugin>
 </sdf>
