@@ -1,8 +1,8 @@
 <launch>
 
   <!-- Bringup world -->
-  <include file="$(find-pkg-share spaceros_gz_sim)/launch/launch.py">
-    <arg name="world" value="mars"/>
+  <include file="$(find-pkg-share spaceros_gz_sim)/launch/load_world.launch.py">
+    <arg name="world_file" value="mars.sdf"/>
   </include>
 
 </launch>
