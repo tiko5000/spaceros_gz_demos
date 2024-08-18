@@ -1,0 +1,8 @@
+<launch>
+
+  <!-- Bringup world -->
+  <include file="$(find-pkg-share spaceros_gz_sim)/launch/launch.py">
+    <arg name="world" value="enceladus"/>
+  </include>
+
+</launch>
