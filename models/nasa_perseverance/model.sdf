@@ -5,7 +5,7 @@
     <link name='ground'>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>1</mass>
+        <mass>1e-6</mass>
       </inertial>
     </link>
     <link name='Body_Chassis'>
@@ -23,6 +23,14 @@
           </mesh>
         </geometry>
       </visual>
+      <collision name='Body_Chassis_collision'>
+        <pose>0.090020000000000003 0 -1.1333800000000001 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 1 1</size>
+          </box>
+        </geometry>
+      </collision>
     </link>
     <joint name='CENTER_DIFFERENTIAL' type='revolute'>
       <pose relative_to='Body_Chassis'>-0.051979999999999998 0 -1.1333800000000001 0 0 0</pose>
@@ -576,6 +584,15 @@
           </mesh>
         </geometry>
       </visual>
+      <collision name='Body_WheelLeftMiddle_fixed_joint_lump__VisGeom_Wheel_LeftMiddle_collision'>
+        <pose>0.090020000000000003 1.1845000000000001 -0.87050000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>./meshes/Wheel_LeftMiddle.gltf</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
     <joint name='LR_STEER' type='revolute'>
       <pose relative_to='Body_BogieLeft'>-0.625 -0.14291000000000001 0.40000000000000002 0 0 0</pose>
@@ -644,6 +661,15 @@
           </mesh>
         </geometry>
       </visual>
+      <collision name='Body_WheelLeftRear_fixed_joint_lump__VisGeom_Wheel_LeftRear_collision'>
+        <pose>1.165 1.0625 -0.87050000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>./meshes/Wheel_LeftRear.gltf</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
     <joint name='LF_STEER' type='revolute'>
       <pose relative_to='Body_RockerLeft'>0.88100000000000001 -0.26290999999999998 0.63 0 0 0</pose>
@@ -712,6 +738,15 @@
           </mesh>
         </geometry>
       </visual>
+      <collision name='Body_WheelLeftFront_fixed_joint_lump__VisGeom_Wheel_LeftFront_collision'>
+        <pose>-1.095 1.0625 -0.87050000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>./meshes/Wheel_LeftFront.gltf</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
     <joint name='RIGHT_DIFFERENTIAL' type='revolute'>
       <pose relative_to='Body_Chassis'>0.30402000000000001 0.79959000000000002 -0.89288000000000001 0 0 0</pose>
@@ -814,6 +849,15 @@
           </mesh>
         </geometry>
       </visual>
+      <collision name='Body_WheelRightFront_fixed_joint_lump__VisGeom_Wheel_RightFront_collision'>
+        <pose>-1.095 -1.0625 -0.87050000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>./meshes/Wheel_RightFront.gltf</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
     <joint name='RIGHT_BOGIE' type='revolute'>
       <pose relative_to='Body_RockerRight'>-0.754 0.12 0.23000000000000001 0 0 0</pose>
@@ -882,6 +926,15 @@
           </mesh>
         </geometry>
       </visual>
+      <collision name='Body_WheelRightMiddle_fixed_joint_lump__VisGeom_Wheel_RightMiddle_collision'>
+        <pose>0.090020000000000003 -1.1845000000000001 -0.87050000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>./meshes/Wheel_RightMiddle.gltf</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
     <joint name='RR_STEER' type='revolute'>
       <pose relative_to='Body_BogieRight'>-0.625 0.14291000000000001 0.40000000000000002 0 0 0</pose>
@@ -950,6 +1003,15 @@
           </mesh>
         </geometry>
       </visual>
+      <collision name='Body_WheelRightRear_fixed_joint_lump__VisGeom_Wheel_RightRear_collision'>
+        <pose>1.165 -1.0625 -0.87050000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>./meshes/Wheel_RightRear.gltf</uri>
+          </mesh>
+        </geometry>
+      </collision>
     </link>
     <joint name='RSM_AZ_ENC' type='revolute'>
       <pose relative_to='Body_Chassis'>0.804037 0.55902799999999997 -1.91927 0 0 3.1241400000000001</pose>
