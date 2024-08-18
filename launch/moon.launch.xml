@@ -1,8 +1,16 @@
 <launch>
 
   <!-- Bringup world -->
-  <include file="$(find-pkg-share spaceros_gz_sim)/launch/launch.py">
-    <arg name="world" value="moon"/>
+  <include file="$(find-pkg-share spaceros_gz_sim)/launch/load_world.launch.py">
+    <arg name="world_file" value="moon.sdf"/>
   </include>
+
+  <!-- Remap topics -->
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" 
+    args="/model/youBot/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist 
+          /model/youBot/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry 
+          /model/youBot/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V">
+  </node>
+
 
 </launch>

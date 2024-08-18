@@ -22,4 +22,4 @@ Once you have a running container, to get another shell, run
 
 2. Run `source install/setup.bash`
 
-3. Start the demo with `ros2 launch spaceros_gz_sim launch.py`
+3. Start the demo with `ros2 launch moon.launch.xml`, `mars.launch.xml`, or `enceladus.launch.xml`
