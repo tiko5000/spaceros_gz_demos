@@ -12,13 +12,11 @@ def generate_launch_description():
     gz_model_path = PathJoinSubstitution([pkg_spaceros_gz_demos, 'models'])
 
     return LaunchDescription([
+        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', gz_model_path),
         DeclareLaunchArgument(
             'world_file',
-            default_value='moon.sdf',
-            choices=['moon.sdf', 'mars.sdf', 'enceladus.sdf'],
             description='World file to load into Gazebo'
         ),
-        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', gz_model_path),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gz_launch_path),
             launch_arguments={
