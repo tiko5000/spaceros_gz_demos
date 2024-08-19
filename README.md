@@ -1,6 +1,6 @@
 # spaceros_gz_demos
 
-This is a ROS 2 package demonstrating how to use Gazebo for robotic simulations in the Space ROS environment.
+This is a ROS 2 package demonstrating how to use Gazebo for robotic simulations in the Space ROS environment. The simulated worlds include a submersible robot on Enceladus, the Perseverance rover and Ingenuity helicopter on Mars, and swarm of construction rovers on the Moon. Gravity of each world is set to their actual values, and the Moon uses the Selenographic Coordinate System (SCS).
 
 ## Docker setup
 
@@ -26,3 +26,17 @@ If you don't have docker, install it with `sudo apt install docker.io`. If you g
 2. Run `source install/setup.bash`
 
 3. Start one of the demos with `ros2 launch spaceros_gz_demos moon.launch.xml`, `mars.launch.xml`, or `enceladus.launch.xml`
+
+## Example commands
+### Moon
+To move the youBot run the following command in a new sourced terminal
+```bash
+ros2 topic pub /model/youBot/cmd_vel geometry_msgs/msg/Twist "linear:
+  x: 0.0
+  y: 0.5
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.2"
+```
