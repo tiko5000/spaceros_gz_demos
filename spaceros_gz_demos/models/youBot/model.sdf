@@ -492,7 +492,6 @@
           <friction>
             <ode>
               <mu>1.0</mu>
-              <mu2>0.0</mu2>
               <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
             </ode>
           </friction>
@@ -543,7 +542,6 @@
           <friction>
             <ode>
               <mu>1.0</mu>
-              <mu2>0.0</mu2>
               <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
             </ode>
           </friction>
@@ -594,7 +592,6 @@
           <friction>
             <ode>
               <mu>1.0</mu>
-              <mu2>0.0</mu2>
               <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
             </ode>
           </friction>
@@ -645,7 +642,6 @@
           <friction>
             <ode>
               <mu>1.0</mu>
-              <mu2>0.0</mu2>
               <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
             </ode>
           </friction>
@@ -1001,8 +997,8 @@
       name="gz::sim::systems::MecanumDrive">
       <front_left_joint>wheel_joint_fl</front_left_joint>
       <front_right_joint>wheel_joint_fr</front_right_joint>
-      <back_left_joint>wheel_joint_rl</back_left_joint>
-      <back_right_joint>wheel_joint_rr</back_right_joint>
+      <back_left_joint>wheel_joint_bl</back_left_joint>
+      <back_right_joint>wheel_joint_br</back_right_joint>
       <wheel_separation>0.316</wheel_separation>
       <wheelbase>0.456</wheelbase>
       <wheel_radius>0.05</wheel_radius>
