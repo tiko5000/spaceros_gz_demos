@@ -10,17 +10,15 @@ If you don't have docker, install it with `sudo apt install docker.io`. If you g
 
 2. Build the docker image locally with
 
-`./docker_build.sh`
+    ```./docker_build.sh```
 
-1. Start the container with
+3. Start the container with
 
-`./docker_start.sh`
+    ```./docker_start.sh```
 
-Once in the docker container, you can run `ros2` commands as well as use gui tools like `rviz2` and `gz sim`.
+4. Once you have a running container, to get another shell, run 
 
-1. Once you have a running container, to get another shell, run 
-
-`./docker_shell.sh`
+    ```./docker_shell.sh```
 
 ## Running code in the docker container
 1. Once you are in the docker container, run `colcon build` (you should be in the `~/spaceros/ws` directory)
