@@ -22,10 +22,10 @@ RUN sudo apt-get update \
         ros-humble-ros-gzharmonic \
     && sudo apt-get autoremove -y 
 
-# Replace old entrypoint with current entrypoint that extends upon it
+    # Replace old entrypoint with current entrypoint that extends upon it
 RUN sudo mv /ros_entrypoint.sh /old_entrypoint.sh
-COPY ./entrypoint.sh /ros_entrypoint.sh
+COPY entrypoint.sh /ros_entrypoint.sh
 RUN sudo chmod +x /ros_entrypoint.sh
 
-RUN mkdir -p /home/spaceros-user/spaceros/ws/src/spaceros_gz_sim
+RUN mkdir -p /home/spaceros-user/spaceros/ws/src/spaceros_gz_demos
 WORKDIR /home/spaceros-user/spaceros/ws
