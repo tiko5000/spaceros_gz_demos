@@ -1,12 +1,17 @@
 #!/bin/bash
+
+# Previous spaceros entrypoint contents
+# set -e
+# source "${SPACEROS_DIR}/install/setup.bash"
+# export IKOS_SCAN_NOTIFIER_FILES="" # make ikos create .ikosbin files for compiled packages
+# exec "$@"
+
+# Since we have installed new ROS packages in our Dockerfile, we need to source ROS again.
 source /opt/ros/humble/setup.bash
-
+# Now recreate old entrypoint
 set -e
-
-# Setup the Space ROS environment
 source "${SPACEROS_DIR}/install/setup.bash"
 export IKOS_SCAN_NOTIFIER_FILES="" # make ikos create .ikosbin files for compiled packages
-
 
 echo "                                         _.oo.   "
 echo "                 _.u[[/;:,.         .odMMMMMM'   "
@@ -24,6 +29,5 @@ echo " dMMMMMMM@^`       `^^^^                         "
 echo "YMMMUP^                                          "
 echo " ^^                                              "
 echo "                   Welcome!                      "
-
 
 exec "$@"
