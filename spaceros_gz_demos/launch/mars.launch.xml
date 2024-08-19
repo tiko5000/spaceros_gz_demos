@@ -2,7 +2,7 @@
 
   <!-- Bringup world -->
   <include file="$(find-pkg-share spaceros_gz_demos)/launch/load_world.launch.py">
-    <arg name="world_file" value="mars.sdf"/>
+    <arg name="world_file" value="$(find-pkg-share spaceros_gz_demos)/worlds/mars.sdf"/>
   </include>
 
 </launch>

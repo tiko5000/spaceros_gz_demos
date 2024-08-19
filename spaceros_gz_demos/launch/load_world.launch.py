@@ -15,13 +15,12 @@ def generate_launch_description():
         SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', gz_model_path),
         DeclareLaunchArgument(
             'world_file',
-            description='World file to load into Gazebo'
+            description='Path to the world file to load into Gazebo'
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gz_launch_path),
             launch_arguments={
-                'gz_args': [PathJoinSubstitution([pkg_spaceros_gz_demos, 'worlds',
-                                                  LaunchConfiguration('world_file')])],
+                'gz_args': [LaunchConfiguration('world_file')],
                 'on_exit_shutdown': 'True'
             }.items(),
         ),
