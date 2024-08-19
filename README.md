@@ -25,4 +25,4 @@ If you don't have docker, install it with `sudo apt install docker.io`. If you g
 
 2. Run `source install/setup.bash`
 
-3. Start one of the demos with `ros2 launch moon.launch.xml`, `mars.launch.xml`, or `enceladus.launch.xml`
+3. Start one of the demos with `ros2 launch spaceros_gz_demos moon.launch.xml`, `mars.launch.xml`, or `enceladus.launch.xml`
