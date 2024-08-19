@@ -1,4 +1,4 @@
-from ament_index_python.packages import get_package_share_directory
+from launch_ros.substitutions import FindPackageShare
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable, IncludeLaunchDescription
 from launch.substitutions import PathJoinSubstitution, LaunchConfiguration
@@ -6,22 +6,23 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 
 def generate_launch_description():
-    pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-    pkg_spaceros_gz_demos = get_package_share_directory('spaceros_gz_demos')
-    gz_launch_path = PathJoinSubstitution([pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py'])
-    gz_model_path = PathJoinSubstitution([pkg_spaceros_gz_demos, 'models'])
-
     return LaunchDescription([
-        SetEnvironmentVariable('GZ_SIM_RESOURCE_PATH', gz_model_path),
+        SetEnvironmentVariable(
+            'GZ_SIM_RESOURCE_PATH',
+            PathJoinSubstitution([FindPackageShare('spaceros_gz_demos'), 'models'])
+        ),
         DeclareLaunchArgument(
             'world_file',
-            description='World file to load into Gazebo'
+            description='Path to the world file to load into Gazebo'
         ),
         IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(gz_launch_path),
+            PythonLaunchDescriptionSource(
+                PathJoinSubstitution([
+                    FindPackageShare('ros_gz_sim'), 'launch', 'gz_sim.launch.py'
+                ])
+            ),
             launch_arguments={
-                'gz_args': [PathJoinSubstitution([pkg_spaceros_gz_demos, 'worlds',
-                                                  LaunchConfiguration('world_file')])],
+                'gz_args': [LaunchConfiguration('world_file')],
                 'on_exit_shutdown': 'True'
             }.items(),
         ),
