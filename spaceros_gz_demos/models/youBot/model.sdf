@@ -3,7 +3,7 @@
   <model name="youBot">
     <!-- gz topic -t "/model/youBot/cmd_vel" -m gz.msgs.Twist -p "linear: {y: 1.5}, angular: {z: 1.2}" -->
     <self_collide>1</self_collide>
-    <pose>-5 0 4.8 0 0 1.8</pose>
+    <pose>-5 0 5.2 0 0 1.8</pose>
     <link name="base_footprint">
       <pose>0 0 0 0 0 0</pose>
       <inertial>

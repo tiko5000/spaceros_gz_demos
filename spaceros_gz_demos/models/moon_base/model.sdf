@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+    <model name="moon_base">
+        <static>true</static>
+        <pose>-5.5 0 5 1.57 0 0</pose>
+        <link name="platform">
+            <collision name="platform_collision">
+                <geometry>
+                    <mesh>
+                        <uri>models://moon_base/resources/platform.glb</uri>
+                        <scale>0.03 0.03 0.03</scale>
+                    </mesh>
+                </geometry>
+                <surface>
+                    <friction>
+                        <ode>
+                            <mu>0.5</mu>
+                        </ode>
+                    </friction>
+                </surface>
+            </collision>
+            <visual name="platform_visual">
+                <geometry>
+                    <mesh>
+                        <uri>models://moon_base/resources/platform.glb</uri>
+                        <scale>0.03 0.03 0.03</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+        <link name="ramp">
+            <pose>3.5 0 0 -1.57 0 -0.2</pose>
+            <visual name="ramp_visual">
+                <geometry>
+                    <plane>
+                        <normal>0 0 1</normal>
+                        <size>5 2</size>
+                    </plane>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>

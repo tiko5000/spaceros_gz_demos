@@ -52,5 +52,9 @@
       <uri> youBot </uri>
     </include>
 
+    <include>
+      <uri> moon_base </uri>
+    </include>
+
   </world>
 </sdf>
