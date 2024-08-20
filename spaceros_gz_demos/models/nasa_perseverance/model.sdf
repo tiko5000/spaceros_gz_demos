@@ -2,7 +2,7 @@
 <sdf version='1.11'>
   <model name='nasa_perseverance'>
     <self_collide>1</self_collide>
-    <pose>0 0 -0.5 3.14 0.2 0</pose>
+    <pose>0.7 0 3.2 3.1 0.13 2.75</pose>
     <link name='ground'>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
