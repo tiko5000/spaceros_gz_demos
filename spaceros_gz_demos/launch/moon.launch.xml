@@ -12,6 +12,13 @@
           /model/youBot/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V
           /model/X2/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
           /model/X2/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
+          /world/moon/model/X2/link/base_link/sensor/camera_front/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
+          /world/moon/model/X2/link/base_link/sensor/camera_front/image@sensor_msgs/msg/Image@gz.msgs.Image
+          /world/moon/model/X2/link/base_link/sensor/front_laser/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
+          /world/moon/model/X2/link/base_link/sensor/front_laser/scan/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
+          /world/moon/model/X2/link/base_link/sensor/imu_sensor/imu@sensor_msgs/msg/Imu@gz.msgs.IMU
+          /world/moon/model/youBot/link/hokuyo_lidar/sensor/hokuyo_utm30lx/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
+          /world/moon/model/youBot/link/hokuyo_lidar/sensor/hokuyo_utm30lx/scan/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
           ">
   </node>
 

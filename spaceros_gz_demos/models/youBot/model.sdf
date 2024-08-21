@@ -410,7 +410,7 @@
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
     </link>
-    <link name="base_laser_front_link">
+    <link name="hokuyo_lidar">
       <pose>0.300000 0 -0.030000 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
@@ -424,7 +424,7 @@
         </inertia>
         <mass>0.160000</mass>
       </inertial>
-      <collision name="base_laser_front_link_geom">
+      <collision name="hokuyo_lidar_collision">
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
@@ -433,7 +433,7 @@
         </geometry>
         <laser_retro>0</laser_retro>
       </collision>
-      <visual name="base_laser_front_link_geom_visual">
+      <visual name="hokuyo_lidar_visual">
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
@@ -441,26 +441,29 @@
           </mesh>
         </geometry>
       </visual>
-      <sensor name="base_laser_front" type="ray">
-        <pose>0 0 0 0 0 0</pose>
-        <ray>
+      <sensor name="hokuyo_utm30lx" type="gpu_ray">
+        <pose>0 0 0.055 0 0 0</pose>
+        <update_rate>20</update_rate>
+        <lidar>
           <scan>
             <horizontal>
-              <samples>640</samples>
+              <samples>1080</samples>
               <resolution>1</resolution>
-              <min_angle>-1.570000</min_angle>
-              <max_angle>1.570000</max_angle>
+              <min_angle>-2.356195</min_angle>
+              <max_angle>2.356195</max_angle>
             </horizontal>
           </scan>
           <range>
-            <min>0.050000</min>
-            <max>5.600000</max>
-            <resolution>0.360000</resolution>
+            <min>0.1</min>
+            <max>30</max>
+            <resolution>0.001</resolution>
           </range>
-        </ray>
-        <always_on>0</always_on>
-        <update_rate>10.000000</update_rate>
-        <visualize>0</visualize>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </lidar>
       </sensor>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -886,10 +889,10 @@
         <use_parent_model_frame>true</use_parent_model_frame>
       </axis>
     </joint>
-    <joint name="base_laser_front_hokuyo_urg04_laser_joint" type="revolute">
+    <joint name="hokuyo_joint" type="revolute">
       <pose>0 0 0 0 0 0</pose>
       <parent>base_link</parent>
-      <child>base_laser_front_link</child>
+      <child>hokuyo_lidar</child>
       <axis>
         <dynamics>
           <damping>0</damping>
