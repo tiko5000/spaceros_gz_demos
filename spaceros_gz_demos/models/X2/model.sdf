@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
     <model name="X2">
-        <pose>0 -2.4 3.6 0 0 0</pose>
+        <pose>0 -2.4 3.6 0 0 -1.4</pose>
         <link name="base_link">
             <inertial>
                 <pose>0.011999 0.002 0.066996 0 -0 0</pose>

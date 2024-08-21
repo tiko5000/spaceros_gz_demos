@@ -3,8 +3,8 @@
     <model name="moon_base">
         <static>true</static>
         <pose>0 0 3.3 0 0 0</pose>
-        <link name="platform_inner">
-            <visual name="platform_inner_visual">
+        <link name="platform">
+            <visual name="platform_visual">
                 <geometry>
                     <cylinder>
                         <radius>1.5</radius>
@@ -18,10 +18,10 @@
                     </script>
                 </material>
             </visual>
-            <collision name="platform_inner_collision">
+            <collision name="platform_collision">
                 <geometry>
                     <cylinder>
-                        <radius>1</radius>
+                        <radius>1.5</radius>
                         <length>1</length>
                     </cylinder>
                 </geometry>
