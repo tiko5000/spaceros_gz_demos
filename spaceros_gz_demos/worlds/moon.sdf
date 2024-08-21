@@ -56,5 +56,13 @@
       <uri> moon_base </uri>
     </include>
 
+    <include>
+      <uri> solar_panel </uri>
+    </include>
+
+    <include>
+      <uri> X2 </uri>
+    </include>
+
   </world>
 </sdf>

@@ -2,12 +2,38 @@
 <sdf version="1.6">
     <model name="solar_panel">
         <static>true</static>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>6 -8 4 1.57 0 0</pose>
+        <link name="pole">
+            <pose>0 -1 0 1.57 0 0</pose>
+            <visual name="pole_visual">
+                <geometry>
+                    <cylinder>
+                        <radius>0.1</radius>
+                        <length>2</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/Black</name>
+                    </script>
+                </material>
+            </visual>
+            <collision name="pole_collision">
+                <geometry>
+                    <cylinder>
+                        <radius>0.1</radius>
+                        <length>2</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+        </link>
         <link name="panel">
             <visual name="panel_visual">
                 <geometry>
                     <mesh>
                         <uri>model://solar_panel/resources/solar_panel.glb</uri>
+                        <scale>0.01 0.01 0.01</scale>
                     </mesh>
                 </geometry>
             </visual>
@@ -15,9 +41,24 @@
                 <geometry>
                     <mesh>
                         <uri>model://solar_panel/resources/solar_panel.glb</uri>
+                        <scale>0.01 0.01 0.01</scale>
                     </mesh>
                 </geometry>
             </collision>
         </link>
+        <joint name="panel_pole_joint" type="revolute">
+            <parent>pole</parent>
+            <child>panel</child>
+            <pose>0 0 0 0 0 0</pose>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <lower>-1.57</lower>
+                    <upper>1.57</upper>
+                    <effort>100</effort>
+                    <velocity>0.1</velocity>
+                </limit>
+            </axis>
+        </joint>
     </model>
 </sdf>
