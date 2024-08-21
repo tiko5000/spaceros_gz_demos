@@ -7,9 +7,12 @@
 
   <!-- Remap topics -->
   <node pkg="ros_gz_bridge" exec="parameter_bridge" 
-    args="/model/youBot/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist 
-          /model/youBot/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry 
-          /model/youBot/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V">
+    args="/model/youBot/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
+          /model/youBot/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
+          /model/youBot/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V
+          /model/X2/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
+          /model/X2/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
+          ">
   </node>
 
 
