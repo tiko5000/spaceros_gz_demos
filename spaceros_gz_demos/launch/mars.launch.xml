@@ -5,4 +5,21 @@
     <arg name="world_file" value="$(find-pkg-share spaceros_gz_demos)/worlds/mars.sdf"/>
   </include>
 
+  <!-- Remap topics -->
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" 
+    args="/model/nasa_perseverance/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
+          /model/nasa_perseverance/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V
+          /nasa_perseverance/camera@sensor_msgs/msg/Image@gz.msgs.Image
+          /nasa_perseverance/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
+          /nasa_perseverance/depth_camera@sensor_msgs/msg/Image@gz.msgs.Image
+          /nasa_perseverance/depth_camera/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
+          /model/nasa_perseverance/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
+          /model/nasa_ingenuity/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
+          /nasa_ingenuity/camera@sensor_msgs/msg/Image@gz.msgs.Image
+          /nasa_ingenuity/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
+          /nasa_ingenuity/depth_camera@sensor_msgs/msg/Image@gz.msgs.Image
+          /nasa_ingenuity/depth_camera/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
+         ">
+  </node>
+
 </launch>

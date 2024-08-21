@@ -358,6 +358,39 @@
           </mesh>
         </geometry>
       </visual>
+      <sensor name="camera" type="camera">
+        <pose relative_to="Body_RA_Link5">0.2 0 0 0 0 0</pose>
+        <camera>
+          <horizontal_fov>1.05</horizontal_fov>
+          <image>
+            <width>256</width>
+            <height>256</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>10</far>
+          </clip>
+        </camera>
+        <update_rate>30</update_rate>
+        <topic>nasa_perseverance/camera</topic>
+      </sensor>
+      <sensor name="depth_camera" type="depth_camera">
+        <pose relative_to="Body_RA_Link5">0.2 0 0 0 0 0</pose>
+        <camera>
+          <horizontal_fov>1.05</horizontal_fov>
+          <image>
+            <width>256</width>
+            <height>256</height>
+            <format>R_FLOAT32</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>10</far>
+          </clip>
+        </camera>
+        <update_rate>30</update_rate>
+        <topic>nasa_perseverance/depth_camera</topic>
+      </sensor>
     </link>
     <joint name='DRILL_FEED' type='prismatic'>
       <pose relative_to='Body_RA_Link5'>-0.20849999999999991 5.0999999999967738e-05 -0.32846560000000002 0 0 0</pose>
@@ -640,23 +673,10 @@
         </geometry>
       </collision>
     </link>
-    <joint name='LR_STEER' type='revolute'>
+    <joint name='LR_STEER' type='fixed'>
       <pose relative_to='Body_BogieLeft'>-0.625 -0.14291000000000001 0.40000000000000002 0 0 0</pose>
       <parent>Body_BogieLeft</parent>
       <child>Body_SteerLeftRear</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-1.7976900000000001e+308</lower>
-          <upper>1.7976900000000001e+308</upper>
-          <effort>1.7976900000000001e+308</effort>
-          <velocity>1.7976900000000001e+308</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
     </joint>
     <link name='Body_SteerLeftRear'>
       <pose relative_to='LR_STEER'>0 0 0 0 0 0</pose>
@@ -717,23 +737,10 @@
         </geometry>
       </collision>
     </link>
-    <joint name='LF_STEER' type='revolute'>
+    <joint name='LF_STEER' type='fixed'>
       <pose relative_to='Body_RockerLeft'>0.88100000000000001 -0.26290999999999998 0.63 0 0 0</pose>
       <parent>Body_RockerLeft</parent>
       <child>Body_SteerLeftFront</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-1.7976900000000001e+308</lower>
-          <upper>1.7976900000000001e+308</upper>
-          <effort>1.7976900000000001e+308</effort>
-          <velocity>1.7976900000000001e+308</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
     </joint>
     <link name='Body_SteerLeftFront'>
       <pose relative_to='LF_STEER'>0 0 0 0 0 0</pose>
@@ -828,23 +835,10 @@
         </geometry>
       </visual>
     </link>
-    <joint name='RF_STEER' type='revolute'>
+    <joint name='RF_STEER' type='fixed'>
       <pose relative_to='Body_RockerRight'>0.88100000000000001 0.26290999999999998 0.63 0 0 0</pose>
       <parent>Body_RockerRight</parent>
       <child>Body_SteerRightFront</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-1.7976900000000001e+308</lower>
-          <upper>1.7976900000000001e+308</upper>
-          <effort>1.7976900000000001e+308</effort>
-          <velocity>1.7976900000000001e+308</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
     </joint>
     <link name='Body_SteerRightFront'>
       <pose relative_to='RF_STEER'>0 0 0 0 0 0</pose>
@@ -982,23 +976,10 @@
         </geometry>
       </collision>
     </link>
-    <joint name='RR_STEER' type='revolute'>
+    <joint name='RR_STEER' type='fixed'>
       <pose relative_to='Body_BogieRight'>-0.625 0.14291000000000001 0.40000000000000002 0 0 0</pose>
       <parent>Body_BogieRight</parent>
       <child>Body_SteerRightRear</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-1.7976900000000001e+308</lower>
-          <upper>1.7976900000000001e+308</upper>
-          <effort>1.7976900000000001e+308</effort>
-          <velocity>1.7976900000000001e+308</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-      </axis>
     </joint>
     <link name='Body_SteerRightRear'>
       <pose relative_to='RR_STEER'>0 0 0 0 0 0</pose>
@@ -1625,5 +1606,23 @@
     <frame name='Frame_SCRMI' attached_to='Joint_for_Frame_SCRMI'>
       <pose>0 0 0 0 0 0</pose>
     </frame>
+
+    <plugin
+      filename="gz-sim-diff-drive-system"
+      name="gz::sim::systems::DiffDrive">
+      <left_joint>Body_WheelLeftFront</left_joint>
+      <right_joint>Body_WheelRightFront</right_joint>
+      <wheel_separation>2.125</wheel_separation>
+      <wheel_radius>0.526</wheel_radius>
+      <max_linear_acceleration>1</max_linear_acceleration>
+      <min_linear_acceleration>-1</min_linear_acceleration>
+      <max_angular_acceleration>2</max_angular_acceleration>
+      <min_angular_acceleration>-2</min_angular_acceleration>
+      <max_linear_velocity>10.5</max_linear_velocity>
+      <min_linear_velocity>-10.5</min_linear_velocity>
+      <max_angular_velocity>10</max_angular_velocity>
+      <min_angular_velocity>-10</min_angular_velocity>
+    </plugin>
+
   </model>
 </sdf>
