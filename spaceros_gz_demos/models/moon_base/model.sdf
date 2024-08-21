@@ -2,42 +2,107 @@
 <sdf version="1.6">
     <model name="moon_base">
         <static>true</static>
-        <pose>-5.5 0 5 1.57 0 0</pose>
-        <link name="platform">
-            <collision name="platform_collision">
+        <pose>0 0 3.3 0 0 0</pose>
+        <link name="platform_inner">
+            <visual name="platform_inner_visual">
                 <geometry>
-                    <mesh>
-                        <uri>models://moon_base/resources/platform.glb</uri>
-                        <scale>0.03 0.03 0.03</scale>
-                    </mesh>
+                    <cylinder>
+                        <radius>1.5</radius>
+                        <length>1</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/Gray</name>
+                    </script>
+                </material>
+            </visual>
+            <collision name="platform_inner_collision">
+                <geometry>
+                    <cylinder>
+                        <radius>1</radius>
+                        <length>1</length>
+                    </cylinder>
                 </geometry>
                 <surface>
                     <friction>
-                        <ode>
-                            <mu>0.5</mu>
-                        </ode>
+                    <ode>
+                        <mu>50</mu>
+                    </ode>
                     </friction>
                 </surface>
             </collision>
-            <visual name="platform_visual">
+        </link>
+        <link name="dome1">
+            <pose>20 -12 -0.7 0 0 0.5</pose>
+            <visual name="dome1_visual">
                 <geometry>
                     <mesh>
-                        <uri>models://moon_base/resources/platform.glb</uri>
-                        <scale>0.03 0.03 0.03</scale>
+                        <uri>model://moon_base/resources/dome.dae</uri>
+                        <scale>5 5 5</scale>
                     </mesh>
                 </geometry>
             </visual>
-        </link>
-        <link name="ramp">
-            <pose>3.5 0 0 -1.57 0 -0.2</pose>
-            <visual name="ramp_visual">
+            <collision name="dome1_collision">
                 <geometry>
-                    <plane>
-                        <normal>0 0 1</normal>
-                        <size>5 2</size>
-                    </plane>
+                    <mesh>
+                        <uri>model://moon_base/resources/dome.dae</uri>
+                        <scale>4 4 4</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="dome2">
+            <pose>12 -28 -0.7 0 0 0.5</pose>
+            <visual name="dome2_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://moon_base/resources/dome.dae</uri>
+                        <scale>4 4 4</scale>
+                    </mesh>
                 </geometry>
             </visual>
+            <collision name="dome2_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://moon_base/resources/dome.dae</uri>
+                        <scale>5 5 5</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="connector_tunnel">
+            <pose>16.5 -20.5 0 -1.1 1.5 0</pose>
+            <visual name="connector_tunnel_visual">
+                <geometry>
+                    <cylinder>
+                        <radius>2</radius>
+                        <length>15</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/Gray</name>
+                    </script>
+                </material>
+            </visual>
+            <collision name="connector_tunnel_collision">
+                <geometry>
+                    <cylinder>
+                        <radius>2</radius>
+                        <length>15</length>
+                    </cylinder>
+                </geometry>
+                <surface>
+                    <friction>
+                    <ode>
+                        <mu>50</mu>
+                    </ode>
+                    </friction>
+                </surface>
+            </collision>
         </link>
     </model>
 </sdf>
