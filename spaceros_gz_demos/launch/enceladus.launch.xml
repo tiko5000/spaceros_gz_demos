@@ -5,4 +5,14 @@
     <arg name="world_file" value="$(find-pkg-share spaceros_gz_demos)/worlds/enceladus.sdf"/>
   </include>
 
+  <!-- Remap topics -->
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" 
+    args="/model/submarine/joint/propeller_joint/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
+          /model/submarine/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
+          /sonar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
+          /sonar/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
+          ">
+  </node>
+
+
 </launch>
