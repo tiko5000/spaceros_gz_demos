@@ -9,6 +9,8 @@
   <node pkg="ros_gz_bridge" exec="parameter_bridge" 
     args="/model/X2/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
           /model/X2/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
+          /model/X2/odometry_with_covariance@nav_msgs/msg/Odometry@gz.msgs.OdometryWithCovariance
+          /model/X2/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V
           /world/moon/model/X2/link/base_link/sensor/camera_front/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
           /world/moon/model/X2/link/base_link/sensor/camera_front/image@sensor_msgs/msg/Image@gz.msgs.Image
           /world/moon/model/X2/link/base_link/sensor/front_laser/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
@@ -17,6 +19,8 @@
           ">
     <remap from="/model/X2/cmd_vel" to="/X2/cmd_vel"/>
     <remap from="/model/X2/odometry" to="/X2/odometry"/>
+    <remap from="/model/X2/odometry_with_covariance" to="/X2/odometry_with_covariance"/>
+    <remap from="/model/X2/tf" to="/tf"/>
     <remap from="/world/moon/model/X2/link/base_link/sensor/camera_front/camera_info" to="/X2/camera_front/camera_info"/>
     <remap from="/world/moon/model/X2/link/base_link/sensor/camera_front/image" to="/X2/camera_front/image"/>
     <remap from="/world/moon/model/X2/link/base_link/sensor/front_laser/scan" to="/X2/front_laser/scan"/>
