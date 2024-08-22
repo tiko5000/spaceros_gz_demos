@@ -15,6 +15,13 @@
           /world/moon/model/X2/link/base_link/sensor/front_laser/scan/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
           /world/moon/model/X2/link/base_link/sensor/imu_sensor/imu@sensor_msgs/msg/Imu@gz.msgs.IMU
           ">
+    <remap from="/model/X2/cmd_vel" to="/X2/cmd_vel"/>
+    <remap from="/model/X2/odometry" to="/X2/odometry"/>
+    <remap from="/world/moon/model/X2/link/base_link/sensor/camera_front/camera_info" to="/X2/camera_front/camera_info"/>
+    <remap from="/world/moon/model/X2/link/base_link/sensor/camera_front/image" to="/X2/camera_front/image"/>
+    <remap from="/world/moon/model/X2/link/base_link/sensor/front_laser/scan" to="/X2/front_laser/scan"/>
+    <remap from="/world/moon/model/X2/link/base_link/sensor/front_laser/scan/points" to="/X2/front_laser/scan/points"/>
+    <remap from="/world/moon/model/X2/link/base_link/sensor/imu_sensor/imu" to="/X2/imu_sensor/imu"/>
   </node>
 
 
