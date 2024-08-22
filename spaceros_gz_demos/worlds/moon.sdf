@@ -49,10 +49,6 @@
     </include>
 
     <include>
-      <uri> youBot </uri>
-    </include>
-
-    <include>
       <uri> moon_base </uri>
     </include>
 

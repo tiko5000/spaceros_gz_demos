@@ -3,37 +3,6 @@
     <model name="moon_base">
         <static>true</static>
         <pose>0 0 3.3 0 0 0</pose>
-        <link name="platform">
-            <visual name="platform_visual">
-                <geometry>
-                    <cylinder>
-                        <radius>1.5</radius>
-                        <length>1</length>
-                    </cylinder>
-                </geometry>
-                <material>
-                    <script>
-                        <uri>file://media/materials/scripts/gazebo.material</uri>
-                        <name>Gazebo/Gray</name>
-                    </script>
-                </material>
-            </visual>
-            <collision name="platform_collision">
-                <geometry>
-                    <cylinder>
-                        <radius>1.5</radius>
-                        <length>1</length>
-                    </cylinder>
-                </geometry>
-                <surface>
-                    <friction>
-                    <ode>
-                        <mu>50</mu>
-                    </ode>
-                    </friction>
-                </surface>
-            </collision>
-        </link>
         <link name="dome1">
             <pose>20 -12 -0.7 0 0 0.5</pose>
             <visual name="dome1_visual">
