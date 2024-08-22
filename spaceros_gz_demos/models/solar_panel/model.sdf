@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sdf version="1.6">
     <model name="solar_panel">
-        <static>true</static>
         <pose>6 -8 4 1.57 0 0</pose>
         <link name="pole">
             <pose>0 -1 0 1.57 0 0</pose>
@@ -49,9 +48,8 @@
         <joint name="panel_pole_joint" type="revolute">
             <parent>pole</parent>
             <child>panel</child>
-            <pose>0 0 0 0 0 0</pose>
             <axis>
-                <xyz>0 0 1</xyz>
+                <xyz>1 0 0</xyz>
                 <limit>
                     <lower>-1.57</lower>
                     <upper>1.57</upper>
@@ -59,6 +57,10 @@
                     <velocity>0.1</velocity>
                 </limit>
             </axis>
+        </joint>
+        <joint name="pole_world_joint" type="fixed">
+            <parent>world</parent>
+            <child>pole</child>
         </joint>
     </model>
 </sdf>
