@@ -90,6 +90,7 @@
                 </spot>
                 <direction>0 0 -1</direction>
                 <cast_shadows>1</cast_shadows>
+                <visualize>false</visualize>
             </light>
 
             <light name="right_light_source" type="spot">
@@ -109,6 +110,7 @@
                 </spot>
                 <direction>0 0 -1</direction>
                 <cast_shadows>1</cast_shadows>
+                <visualize>false</visualize>
             </light>
 
             <light name="center_left_light_source" type="spot">
@@ -128,6 +130,7 @@
                 </spot>
                 <direction>0 0 -1</direction>
                 <cast_shadows>1</cast_shadows>
+                <visualize>false</visualize>
             </light>
 
             <light name="center_right_light_source" type="spot">
@@ -147,7 +150,9 @@
                 </spot>
                 <direction>0 0 -1</direction>
                 <cast_shadows>1</cast_shadows>
+                <visualize>false</visualize>
             </light>
+
             <sensor name="imu_sensor" type="imu">
                 <always_on>1</always_on>
                 <update_rate>50</update_rate>
