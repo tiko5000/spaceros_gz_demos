@@ -9,12 +9,14 @@
   <node pkg="ros_gz_bridge" exec="parameter_bridge" 
     args="/model/nasa_perseverance/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
           /model/nasa_perseverance/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V
+          /model/nasa_perseverance/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
           /nasa_perseverance/camera@sensor_msgs/msg/Image@gz.msgs.Image
           /nasa_perseverance/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
           /nasa_perseverance/depth_camera@sensor_msgs/msg/Image@gz.msgs.Image
           /nasa_perseverance/depth_camera/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
-          /model/nasa_perseverance/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
           /model/nasa_ingenuity/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
+          /model/nasa_ingenuity/joint/MHS_TopBlades_v16/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
+          /model/nasa_ingenuity/joint/MHS_BottomBlades_v16/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
           /nasa_ingenuity/camera@sensor_msgs/msg/Image@gz.msgs.Image
           /nasa_ingenuity/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
           /nasa_ingenuity/depth_camera@sensor_msgs/msg/Image@gz.msgs.Image

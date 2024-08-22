@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sdf version="1.6">
   <model name="nasa_ingenuity">
-	<pose>0 -2.5 3.4 3.14 0 0</pose>
+	<pose>0 -2.5 3.6 3.14 0 0</pose>
 	<link name="base_link"> </link>
     <link name="Body_MHS_MainBody_v16">
         <inertial>
@@ -183,6 +183,15 @@
         <child>Body_MHS_TopBlades_v16</child>
         <axis>
             <xyz>0 0 1</xyz>
+            <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+            </limit>
+            <dynamics>
+                <spring_reference>0</spring_reference>
+                <spring_stiffness>0</spring_stiffness>
+            </dynamics>
+            <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
     </joint>
     
@@ -252,6 +261,28 @@
     <plugin
         filename="gz-sim-odometry-publisher-system"
         name="gz::sim::systems::OdometryPublisher">
+    </plugin>
+
+    <plugin
+        filename="gz-sim-thruster-system"
+        name="gz::sim::systems::Thruster">
+        <joint_name>MHS_TopBlades_v16</joint_name>
+        <thrust_coefficient>0.001</thrust_coefficient>
+        <fluid_density>1</fluid_density>
+        <propeller_diameter>1.2</propeller_diameter>
+        <max_thrust_cmd>0</max_thrust_cmd>
+        <min_thrust_cmd>-300</min_thrust_cmd>
+    </plugin>
+
+    <plugin
+        filename="gz-sim-thruster-system"
+        name="gz::sim::systems::Thruster">
+        <joint_name>MHS_BottomBlades_v16</joint_name>
+        <thrust_coefficient>-0.001</thrust_coefficient>
+        <fluid_density>1</fluid_density>
+        <propeller_diameter>1.2</propeller_diameter>
+        <max_thrust_cmd>0</max_thrust_cmd>
+        <min_thrust_cmd>-300</min_thrust_cmd>
     </plugin>
 
 	</model>
