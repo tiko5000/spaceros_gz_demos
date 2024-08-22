@@ -1610,8 +1610,8 @@
     <plugin
       filename="gz-sim-diff-drive-system"
       name="gz::sim::systems::DiffDrive">
-      <left_joint>Body_WheelLeftFront</left_joint>
-      <right_joint>Body_WheelRightFront</right_joint>
+      <left_joint>LF_DRIVE</left_joint>
+      <right_joint>RF_DRIVE</right_joint>
       <wheel_separation>2.125</wheel_separation>
       <wheel_radius>0.526</wheel_radius>
       <max_linear_acceleration>1</max_linear_acceleration>
