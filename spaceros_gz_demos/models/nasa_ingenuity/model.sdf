@@ -61,6 +61,9 @@
         </sensor>
     </link>
 
+    <link name="Swashplate1"> </link>
+    <link name="Swashplate2"> </link>
+
     <link name="Body_MHS_TopBlades_v16">
         <visual name="VisGeom_MHS_TopBlades_v16">
             <geometry>
@@ -179,7 +182,7 @@
     </joint>
     
     <joint name="MHS_TopBlades_v16" type="revolute">
-        <parent>Body_MHS_MainBody_v16</parent>
+        <parent>Body_MHS_BottomBlades_v16</parent>
         <child>Body_MHS_TopBlades_v16</child>
         <axis>
             <xyz>0 0 1</xyz>
@@ -188,8 +191,8 @@
                 <upper>1e+16</upper>
             </limit>
             <dynamics>
-                <spring_reference>0</spring_reference>
-                <spring_stiffness>0</spring_stiffness>
+                <damping>0.1</damping>
+                <friction>0.1</friction>
             </dynamics>
             <use_parent_model_frame>1</use_parent_model_frame>
         </axis>
@@ -197,10 +200,43 @@
     
     <joint name="MHS_BottomBlades_v16" type="revolute">
         <pose>0 0 0 0 0 0.994839</pose>
-        <parent>Body_MHS_MainBody_v16</parent>
+        <parent>Swashplate2</parent>
         <child>Body_MHS_BottomBlades_v16</child>
         <axis>
             <xyz>0 0 1</xyz>
+            <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+            </limit>
+            <dynamics>
+                <damping>0.1</damping>
+                <friction>0.1</friction>
+            </dynamics>
+            <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+    </joint>
+
+    <joint name="Swashplate1_Joint" type="revolute">
+        <parent>Body_MHS_MainBody_v16</parent>
+        <child>Swashplate1</child>
+        <axis>
+            <xyz>0 1 0</xyz>
+            <limit>
+                <lower>-0.3</lower>
+                <upper>0.3</upper>
+            </limit>
+        </axis>
+    </joint>
+
+    <joint name="Swashplate2_Joint" type="revolute">
+        <parent>Swashplate1</parent>
+        <child>Swashplate2</child>
+        <axis>
+            <xyz>1 0 0</xyz>
+            <limit>
+                <lower>-0.3</lower>
+                <upper>0.3</upper>
+            </limit>
         </axis>
     </joint>
     
@@ -300,6 +336,34 @@
         <charging_time>3.0</charging_time>
         <power_load>2.1</power_load>
         <recharge_by_topic>true</recharge_by_topic>
+    </plugin>
+
+    <plugin
+        filename="gz-sim-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>Swashplate1_Joint</joint_name>
+        <topic>nasa_ingenuity/swashplate1_joint_cmd</topic>
+        <p_gain>1</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1</cmd_max>
+        <cmd_min>-1</cmd_min>
+    </plugin>
+
+    <plugin
+        filename="gz-sim-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>Swashplate2_Joint</joint_name>
+        <topic>nasa_ingenuity/swashplate2_joint_cmd</topic>
+        <p_gain>1</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1</cmd_max>
+        <cmd_min>-1</cmd_min>
     </plugin>
 
 	</model>

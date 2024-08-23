@@ -23,6 +23,8 @@
           /nasa_ingenuity/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
           /nasa_ingenuity/depth_camera@sensor_msgs/msg/Image@gz.msgs.Image
           /nasa_ingenuity/depth_camera/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
+          /nasa_ingenuity/swashplate1_joint_cmd@std_msgs/msg/Float64@gz.msgs.Double
+          /nasa_ingenuity/swashplate2_joint_cmd@std_msgs/msg/Float64@gz.msgs.Double
          ">
   </node>
 
