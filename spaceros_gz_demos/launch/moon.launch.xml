@@ -16,7 +16,9 @@
           /world/moon/model/X2/link/base_link/sensor/front_laser/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
           /world/moon/model/X2/link/base_link/sensor/front_laser/scan/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
           /world/moon/model/X2/link/base_link/sensor/imu_sensor/imu@sensor_msgs/msg/Imu@gz.msgs.IMU
+          /solar_panel_joint_cmd@std_msgs/msg/Float64@gz.msgs.Double
           ">
+
     <remap from="/model/X2/cmd_vel" to="/X2/cmd_vel"/>
     <remap from="/model/X2/odometry" to="/X2/odometry"/>
     <remap from="/model/X2/odometry_with_covariance" to="/X2/odometry_with_covariance"/>
