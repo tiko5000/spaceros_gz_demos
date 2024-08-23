@@ -2,52 +2,30 @@
 <sdf version="1.6">
     <model name="moon_base">
         <static>true</static>
-        <pose>0 0 3.3 0 0 0</pose>
-        <link name="dome1">
-            <pose>20 -12 -0.7 0 0 0.5</pose>
-            <visual name="dome1_visual">
+        <pose>16.80 -18.64 4.23 1.57 0 2.63</pose>
+        <link name="moon_base">
+            <visual name="moon_base_visual">
                 <geometry>
                     <mesh>
-                        <uri>model://moon_base/resources/dome.dae</uri>
-                        <scale>5 5 5</scale>
+                        <uri>model://moon_base/resources/moon_base.glb</uri>
                     </mesh>
                 </geometry>
             </visual>
-            <collision name="dome1_collision">
+            <collision name="moon_base_collision">
                 <geometry>
                     <mesh>
-                        <uri>model://moon_base/resources/dome.dae</uri>
-                        <scale>4 4 4</scale>
+                        <uri>model://moon_base/resources/moon_base.glb</uri>
                     </mesh>
                 </geometry>
             </collision>
         </link>
-        <link name="dome2">
-            <pose>12 -28 -0.7 0 0 0.5</pose>
-            <visual name="dome2_visual">
-                <geometry>
-                    <mesh>
-                        <uri>model://moon_base/resources/dome.dae</uri>
-                        <scale>4 4 4</scale>
-                    </mesh>
-                </geometry>
-            </visual>
-            <collision name="dome2_collision">
-                <geometry>
-                    <mesh>
-                        <uri>model://moon_base/resources/dome.dae</uri>
-                        <scale>5 5 5</scale>
-                    </mesh>
-                </geometry>
-            </collision>
-        </link>
-        <link name="connector_tunnel">
-            <pose>16.5 -20.5 0 -1.1 1.5 0</pose>
-            <visual name="connector_tunnel_visual">
+        <link name="foundation1">
+            <pose>2 -1.2 6 1.57 0 0</pose>
+            <visual name="foundation_visual">
                 <geometry>
                     <cylinder>
-                        <radius>2</radius>
-                        <length>15</length>
+                        <radius>5</radius>
+                        <length>2</length>
                     </cylinder>
                 </geometry>
                 <material>
@@ -57,20 +35,38 @@
                     </script>
                 </material>
             </visual>
-            <collision name="connector_tunnel_collision">
+            <collision name="foundation_collision">
                 <geometry>
                     <cylinder>
-                        <radius>2</radius>
-                        <length>15</length>
+                        <radius>5</radius>
+                        <length>2</length>
                     </cylinder>
                 </geometry>
-                <surface>
-                    <friction>
-                    <ode>
-                        <mu>50</mu>
-                    </ode>
-                    </friction>
-                </surface>
+            </collision>
+        </link>
+        <link name="foundation2">
+            <pose>4 -1.2 -2 1.57 0 0</pose>
+            <visual name="foundation_visual">
+                <geometry>
+                    <cylinder>
+                        <radius>5</radius>
+                        <length>2</length>
+                    </cylinder>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/Gray</name>
+                    </script>
+                </material>
+            </visual>
+            <collision name="foundation_collision">
+                <geometry>
+                    <cylinder>
+                        <radius>5</radius>
+                        <length>2</length>
+                    </cylinder>
+                </geometry>
             </collision>
         </link>
     </model>

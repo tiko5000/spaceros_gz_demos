@@ -622,5 +622,47 @@
             <odom_frame>map</odom_frame>
             <robot_base_frame>X2/base_link</robot_base_frame>
         </plugin>
+
+        <model name="truss">
+            <pose>0 0 0.5 0 0 0</pose>
+            <link name="link">
+                <inertial>
+                    <mass>20.7307</mass>
+                    <inertia>
+                    <ixx>4.7978</ixx>
+                    <ixy>0.0</ixy>
+                    <ixz>0.0</ixz>
+                    <iyy>0.4699</iyy>
+                    <iyz>-0.002</iyz>
+                    <izz>4.7978</izz>
+                    </inertia>
+                </inertial>
+                <collision name="collision">
+                    <geometry>
+                    <mesh>
+                        <uri>meshes/truss.dae</uri>
+                    </mesh>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                    <mesh>
+                        <uri>meshes/truss.dae</uri>
+                    </mesh>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <plugin filename="gz-sim-detachable-joint-system"
+                name="gz::sim::systems::DetachableJoint">
+            <parent_link>base_link</parent_link>
+            <child_model>truss</child_model>
+            <child_link>link</child_link>
+            <detach_topic>/truss/detach</detach_topic>
+            <attach_topic>/truss/attach</attach_topic>
+            <output_topic>/truss/state</output_topic>
+        </plugin>
+
     </model>
 </sdf>
