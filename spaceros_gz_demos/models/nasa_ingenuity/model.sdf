@@ -285,5 +285,22 @@
         <min_thrust_cmd>-300</min_thrust_cmd>
     </plugin>
 
+    <plugin filename="gz-sim-linearbatteryplugin-system"
+        name="gz::sim::systems::LinearBatteryPlugin">
+        <battery_name>ingenuity_battery</battery_name>
+        <power_draining_topic>/model/nasa_ingenuity/joint/MHS_TopBlades_v16/cmd_thrust</power_draining_topic>
+        <power_draining_topic>/model/nasa_ingenuity/joint/MHS_BottomBlades_v16/cmd_thrust</power_draining_topic>
+        <!-- Ingenuity has a 6 cell LiPo battery pack -->
+        <voltage>22.2</voltage>
+        <open_circuit_voltage_constant_coef>22.2</open_circuit_voltage_constant_coef>
+        <capacity>1.2009</capacity>
+        <power_load>6.6</power_load>
+        <fix_issue_225>true</fix_issue_225>
+        <enable_recharge>true</enable_recharge>
+        <charging_time>3.0</charging_time>
+        <power_load>2.1</power_load>
+        <recharge_by_topic>true</recharge_by_topic>
+    </plugin>
+
 	</model>
 </sdf>
