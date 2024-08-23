@@ -29,6 +29,8 @@
           /world/moon/model/X2/link/base_link/sensor/imu_sensor/imu@sensor_msgs/msg/Imu@gz.msgs.IMU
  
           /solar_panel_joint_cmd@std_msgs/msg/Float64@gz.msgs.Double
+          /truss/attach@std_msgs/msg/Empty@gz.msgs.Empty
+          /truss/detach@std_msgs/msg/Empty@gz.msgs.Empty
           ">
 
     <remap from="/model/X1/cmd_vel" to="/X1/cmd_vel"/>
