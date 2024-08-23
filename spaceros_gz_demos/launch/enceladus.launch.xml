@@ -14,6 +14,10 @@
           /sonar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
           /sonar/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
           ">
+    <remap from="/model/submarine/joint/right_propeller_joint/cmd_thrust" to="/submarine/right_thrust"/>
+    <remap from="/model/submarine/joint/left_propeller_joint/cmd_thrust" to="/submarine/left_thrust"/>
+    <remap from="/model/submarine/buoyancy_engine" to="/submarine/buoyancy_engine"/>
+    <remap from="/model/submarine/odometry" to="/submarine/odometry"/>
   </node>
 
 
