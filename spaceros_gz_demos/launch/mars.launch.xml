@@ -14,6 +14,16 @@
           /nasa_perseverance/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
           /nasa_perseverance/depth_camera@sensor_msgs/msg/Image@gz.msgs.Image
           /nasa_perseverance/depth_camera/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
+          /nasa_perseverance/arm_joint_1@std_msgs/msg/Float64@gz.msgs.Double
+          /nasa_perseverance/arm_joint_2@std_msgs/msg/Float64@gz.msgs.Double
+          /nasa_perseverance/arm_joint_3@std_msgs/msg/Float64@gz.msgs.Double
+          /nasa_perseverance/arm_joint_4@std_msgs/msg/Float64@gz.msgs.Double
+          /nasa_perseverance/arm_joint_5@std_msgs/msg/Float64@gz.msgs.Double
+          /nasa_perseverance/camera_yaw@std_msgs/msg/Float64@gz.msgs.Double
+          /nasa_perseverance/camera@sensor_msgs/msg/Image@gz.msgs.Image
+          /nasa_perseverance/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
+          /nasa_perseverance/depth_camera@sensor_msgs/msg/Image@gz.msgs.Image
+          /nasa_perseverance/depth_camera/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
           /model/nasa_ingenuity/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
           /model/nasa_ingenuity/joint/MHS_TopBlades_v16/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
           /model/nasa_ingenuity/joint/MHS_BottomBlades_v16/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
@@ -35,6 +45,16 @@
     <remap from="/nasa_perseverance/camera_info" to="/perseverance/camera_info"/>
     <remap from="/nasa_perseverance/depth_camera" to="/perseverance/depth_camera"/>
     <remap from="/nasa_perseverance/depth_camera/points" to="/perseverance/depth_camera/points"/>
+    <remap from="/nasa_perseverance/arm_joint_1" to="/perseverance/arm_joint_1"/>
+    <remap from="/nasa_perseverance/arm_joint_2" to="/perseverance/arm_joint_2"/>
+    <remap from="/nasa_perseverance/arm_joint_3" to="/perseverance/arm_joint_3"/>
+    <remap from="/nasa_perseverance/arm_joint_4" to="/perseverance/arm_joint_4"/>
+    <remap from="/nasa_perseverance/arm_joint_5" to="/perseverance/arm_joint_5"/>
+    <remap from="/nasa_perseverance/camera_yaw" to="/perseverance/camera_yaw"/>
+    <remap from="/nasa_perseverance/camera" to="/ingenuity/camera"/>
+    <remap from="/nasa_perseverance/camera_info" to="/ingenuity/camera_info"/>
+    <remap from="/nasa_perseverance/depth_camera" to="/ingenuity/depth_camera"/>
+    <remap from="/nasa_perseverance/depth_camera/points" to="/ingenuity/depth_camera/points"/>
     
     <!-- Ingenuity Remaps -->
     <remap from="/model/nasa_ingenuity/odometry" to="/ingenuity/odometry"/>

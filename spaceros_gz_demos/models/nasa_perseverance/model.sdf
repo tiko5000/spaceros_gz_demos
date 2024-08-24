@@ -40,7 +40,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -74,7 +74,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -108,7 +108,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -142,7 +142,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -185,7 +185,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -228,7 +228,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -271,7 +271,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -314,7 +314,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -351,39 +351,6 @@
           </mesh>
         </geometry>
       </visual>
-      <sensor name="camera" type="camera">
-        <pose relative_to="Body_RA_Link5">0.2 0 0 0 0 0</pose>
-        <camera>
-          <horizontal_fov>1.05</horizontal_fov>
-          <image>
-            <width>256</width>
-            <height>256</height>
-          </image>
-          <clip>
-            <near>0.1</near>
-            <far>10</far>
-          </clip>
-        </camera>
-        <update_rate>30</update_rate>
-        <topic>nasa_perseverance/camera</topic>
-      </sensor>
-      <sensor name="depth_camera" type="depth_camera">
-        <pose relative_to="Body_RA_Link5">0.2 0 0 0 0 0</pose>
-        <camera>
-          <horizontal_fov>1.05</horizontal_fov>
-          <image>
-            <width>256</width>
-            <height>256</height>
-            <format>R_FLOAT32</format>
-          </image>
-          <clip>
-            <near>0.1</near>
-            <far>10</far>
-          </clip>
-        </camera>
-        <update_rate>30</update_rate>
-        <topic>nasa_perseverance/depth_camera</topic>
-      </sensor>
     </link>
     <joint name='DRILL_FEED' type='prismatic'>
       <pose relative_to='Body_RA_Link5'>-0.20849999999999991 5.0999999999967738e-05 -0.32846560000000002 0 0 0</pose>
@@ -399,7 +366,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -433,7 +400,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -467,7 +434,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -501,7 +468,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -535,7 +502,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -569,7 +536,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -603,7 +570,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -808,7 +775,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -906,7 +873,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1047,7 +1014,7 @@
         </limit>
         <dynamics>
             <damping>0.1</damping>
-            <friction>10</friction>
+            <friction>0.1</friction>
         </dynamics>
       </axis>
     </joint>
@@ -1067,23 +1034,11 @@
         </geometry>
       </visual>
     </link>
-    <joint name='RSM_EL_ENC' type='revolute'>
-      <pose relative_to='Body_RSM_AZ'>0 0 0 3.1415899999999999 -1.5533400000000113 3.1415899999999999</pose>
+    <joint name='RSM_EL_ENC' type='fixed'>
+      <!-- Revolute in reality, but keep fixed so that camera isn't moving in pitch by default (more stable). -->
+      <pose relative_to='Body_RSM_AZ'>0 0 0 0 0 3.1415899999999999</pose>
       <parent>Body_RSM_AZ</parent>
       <child>Body_RSM_EL</child>
-      <axis>
-        <xyz>0 1 0</xyz>
-        <limit>
-          <lower>0</lower>
-          <upper>3.1764999999999999</upper>
-          <effort>1.7976900000000001e+308</effort>
-          <velocity>1.7976900000000001e+308</velocity>
-        </limit>
-        <dynamics>
-            <damping>0.1</damping>
-            <friction>10</friction>
-        </dynamics>
-      </axis>
     </joint>
     <link name='Body_RSM_EL'>
       <pose relative_to='RSM_EL_ENC'>0 0 0 0 0 0</pose>
@@ -1100,6 +1055,40 @@
           </mesh>
         </geometry>
       </visual>
+      <sensor name="camera" type="camera">
+        <pose relative_to="Body_RSM_EL">0.2 0 0 3.14 0 0</pose>
+        <camera>
+          <horizontal_fov>1.05</horizontal_fov>
+          <image>
+            <width>256</width>
+            <height>256</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <update_rate>30</update_rate>
+        <topic>nasa_perseverance/camera</topic>
+        <visualize>true</visualize>
+      </sensor>
+      <sensor name="depth_camera" type="depth_camera">
+        <pose relative_to="Body_RSM_EL">0.2 0 0 3.14 0 0</pose>
+        <camera>
+          <horizontal_fov>1.05</horizontal_fov>
+          <image>
+            <width>256</width>
+            <height>256</height>
+            <format>R_FLOAT32</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <update_rate>30</update_rate>
+        <topic>nasa_perseverance/depth_camera</topic>
+      </sensor>
     </link>
     <frame name='JointRobotArmBase' attached_to='Body_Chassis'>
       <pose>0.090020000000000003 0 -1.1333800000000001 0 0 0</pose>
@@ -1625,10 +1614,10 @@
         <p_gain>1</p_gain>
         <i_gain>0.1</i_gain>
         <d_gain>0.01</d_gain>
-        <i_max>3.14</i_max>
-        <i_min>-3.14</i_min>
-        <cmd_max>1</cmd_max>
-        <cmd_min>-1</cmd_min>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>3.14</cmd_max>
+        <cmd_min>-3.14</cmd_min>
     </plugin>
 
     <plugin
@@ -1639,10 +1628,10 @@
         <p_gain>1</p_gain>
         <i_gain>0.1</i_gain>
         <d_gain>0.01</d_gain>
-        <i_max>3.14</i_max>
-        <i_min>-3.14</i_min>
-        <cmd_max>1</cmd_max>
-        <cmd_min>-1</cmd_min>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>3.14</cmd_max>
+        <cmd_min>-3.14</cmd_min>
     </plugin>
 
     <plugin
@@ -1653,10 +1642,10 @@
         <p_gain>1</p_gain>
         <i_gain>0.1</i_gain>
         <d_gain>0.01</d_gain>
-        <i_max>3.14</i_max>
-        <i_min>-3.14</i_min>
-        <cmd_max>1</cmd_max>
-        <cmd_min>-1</cmd_min>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>3.14</cmd_max>
+        <cmd_min>-3.14</cmd_min>
     </plugin>
 
     <plugin
@@ -1667,10 +1656,10 @@
         <p_gain>1</p_gain>
         <i_gain>0.1</i_gain>
         <d_gain>0.01</d_gain>
-        <i_max>3.14</i_max>
-        <i_min>-3.14</i_min>
-        <cmd_max>1</cmd_max>
-        <cmd_min>-1</cmd_min>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>3.14</cmd_max>
+        <cmd_min>-3.14</cmd_min>
     </plugin>
 
     <plugin
@@ -1681,10 +1670,24 @@
         <p_gain>1</p_gain>
         <i_gain>0.1</i_gain>
         <d_gain>0.01</d_gain>
-        <i_max>3.14</i_max>
-        <i_min>-3.14</i_min>
-        <cmd_max>1</cmd_max>
-        <cmd_min>-1</cmd_min>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>3.14</cmd_max>
+        <cmd_min>-3.14</cmd_min>
+    </plugin>
+
+    <plugin
+        filename="gz-sim-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>RSM_AZ_ENC</joint_name>
+        <topic>nasa_perseverance/camera_yaw</topic>
+        <p_gain>1</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>6.3180899999999998</cmd_max>
+        <cmd_min>0</cmd_min>
     </plugin>
 
   </model>
