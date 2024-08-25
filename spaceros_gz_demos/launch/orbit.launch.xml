@@ -7,18 +7,17 @@
 
   <!-- Remap topics -->
   <node pkg="ros_gz_bridge" exec="parameter_bridge" 
-    args="/model/submarine/joint/right_propeller_joint/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
-          /model/submarine/joint/left_propeller_joint/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
-          /model/submarine/buoyancy_engine@std_msgs/msg/Float64@gz.msgs.Double
-          /model/submarine/odometry@nav_msgs/msg/Odometry@gz.msgs.Odometry
-          /sonar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
-          /sonar/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
+    args="/model/capsule/joint/push_thruster_joint/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
+          /model/capsule/joint/pitch_thruster_joint/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
+          /model/capsule/joint/yaw_thruster_joint/cmd_thrust@std_msgs/msg/Float64@gz.msgs.Double
+          /lidar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
+          /lidar/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
           ">
-    <remap from="/model/submarine/joint/right_propeller_joint/cmd_thrust" to="/submarine/right_thrust"/>
-    <remap from="/model/submarine/joint/left_propeller_joint/cmd_thrust" to="/submarine/left_thrust"/>
-    <remap from="/model/submarine/buoyancy_engine" to="/submarine/buoyancy_engine"/>
-    <remap from="/model/submarine/odometry" to="/submarine/odometry"/>
+    <remap from="/model/capsule/joint/push_thruster_joint/cmd_thrust" to="/capsule/push_thrust"/>
+    <remap from="/model/capsule/joint/pitch_thruster_joint/cmd_thrust" to="/capsule/pitch_thrust"/>
+    <remap from="/model/capsule/joint/yaw_thruster_joint/cmd_thrust" to="/capsule/yaw_thrust"/>
+    <remap from="/lidar" to="/capsule/lidar"/>
+    <remap from="/lidar/points" to="/capsule/lidar/points"/>
   </node>
-
 
 </launch>
