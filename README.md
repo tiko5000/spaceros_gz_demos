@@ -40,27 +40,29 @@ Launch the moon demo with the following command:
 
 This world contains an X1 rover holding a truss, an X2 rover, and a solar panel with one controllable joint.
 
-### ROS Topics
-* /X1/camera_front/camera_info
-* /X1/camera_front/image
-* /X1/cmd_vel
-* /X1/front_laser/scan
-* /X1/front_laser/scan/points
-* /X1/imu_sensor/imu
-* /X1/odometry
-* /X1/odometry_with_covariance
-* /X1/truss/attach
-* /X1/truss/detach
-* /X2/camera_front/camera_info
-* /X2/camera_front/image
-* /X2/cmd_vel
-* /X2/front_laser/scan
-* /X2/front_laser/scan/points
-* /X2/imu_sensor/imu
-* /X2/odometry
-* /X2/odometry_with_covariance
-* /solar_panel/joint
-* /tf
+| Topic Name | Topic Type | Description | 
+| ---------- | ---------- | ----------- |
+| /X1/camera_front/camera_info | sensor_msgs/msg/CameraInfo |                 | 
+| /X1/camera_front/image | sensor_msgs/msg/Image |                 | 
+| /X1/cmd_vel | geometry_msgs/msg/Twist |                 | 
+| /X1/front_laser/scan | sensor_msgs/msg/LaserScan |                 | 
+| /X1/front_laser/scan/points | sensor_msgs/msg/PointCloud2 |                 | 
+| /X1/imu_sensor/imu | sensor_msgs/msg/Imu |                 | 
+| /X1/odometry | nav_msgs/msg/Odometry |                 | 
+| /X1/odometry_with_covariance | nav_msgs/msg/Odometry |                 | 
+| /X1/truss/attach | std_msgs/msg/Empty |                 | 
+| /X1/truss/detach | std_msgs/msg/Empty |                 | 
+| /X2/camera_front/camera_info | sensor_msgs/msg/CameraInfo |                 | 
+| /X2/camera_front/image | sensor_msgs/msg/Image |                 | 
+| /X2/cmd_vel | geometry_msgs/msg/Twist |                 | 
+| /X2/front_laser/scan | sensor_msgs/msg/LaserScan |                 | 
+| /X2/front_laser/scan/points | sensor_msgs/msg/PointCloud2 |                 | 
+| /X2/imu_sensor/imu | sensor_msgs/msg/Imu |                 | 
+| /X2/odometry | nav_msgs/msg/Odometry |                 | 
+| /X2/odometry_with_covariance | nav_msgs/msg/Odometry |                 | 
+| /solar_panel/joint | std_msgs/msg/Float64 |                 | 
+| /tf | tf2_msgs/msg/TFMessage |                 | 
+
 
 ## Mars
 Launch the mars demo with the following command:
@@ -69,32 +71,32 @@ Launch the mars demo with the following command:
 
 This world contains models of the Perserverance rover and the Ingenuity helicopter.
 
-
-### ROS Topics
-* /ingenuity/battery_recharge_start
-* /ingenuity/battery_state
-* /ingenuity/bottom_blades/thrust
-* /ingenuity/camera
-* /ingenuity/camera_info
-* /ingenuity/depth_camera
-* /ingenuity/depth_camera/points
-* /ingenuity/odometry
-* /ingenuity/swashplate_1/joint
-* /ingenuity/swashplate_2/joint
-* /ingenuity/top_blades/thrust
-* /perseverance/arm/joint_1
-* /perseverance/arm/joint_2
-* /perseverance/arm/joint_3
-* /perseverance/arm/joint_4
-* /perseverance/arm/joint_5
-* /perseverance/camera
-* /perseverance/camera_info
-* /perseverance/camera_yaw
-* /perseverance/cmd_vel
-* /perseverance/depth_camera
-* /perseverance/depth_camera/points
-* /perseverance/odometry
-* /tf
+| Topic Name | Topic Type | Description | 
+| ---------- | ---------- | ----------- |
+| /ingenuity/battery_recharge_start | std_msgs/msg/Bool |                 | 
+| /ingenuity/battery_state | sensor_msgs/msg/BatteryState |                 | 
+| /ingenuity/bottom_blades/thrust | std_msgs/msg/Float64 |                 | 
+| /ingenuity/camera | sensor_msgs/msg/Image |                 | 
+| /ingenuity/camera_info | sensor_msgs/msg/CameraInfo |                 | 
+| /ingenuity/depth_camera | sensor_msgs/msg/Image |                 | 
+| /ingenuity/depth_camera/points | sensor_msgs/msg/PointCloud2 |                 | 
+| /ingenuity/odometry | nav_msgs/msg/Odometry |                 | 
+| /ingenuity/swashplate_1/joint | std_msgs/msg/Float64 |                 | 
+| /ingenuity/swashplate_2/joint | std_msgs/msg/Float64 |                 | 
+| /ingenuity/top_blades/thrust | std_msgs/msg/Float64 |                 | 
+| /perseverance/arm/joint_1 | std_msgs/msg/Float64 |                 | 
+| /perseverance/arm/joint_2 | std_msgs/msg/Float64 |                 | 
+| /perseverance/arm/joint_3 | std_msgs/msg/Float64 |                 | 
+| /perseverance/arm/joint_4 | std_msgs/msg/Float64 |                 | 
+| /perseverance/arm/joint_5 | std_msgs/msg/Float64 |                 | 
+| /perseverance/camera | sensor_msgs/msg/Image |                 | 
+| /perseverance/camera_info | sensor_msgs/msg/CameraInfo |                 | 
+| /perseverance/camera_yaw | std_msgs/msg/Float64 |                 | 
+| /perseverance/cmd_vel | geometry_msgs/msg/Twist |                 | 
+| /perseverance/depth_camera | sensor_msgs/msg/Image |                 | 
+| /perseverance/depth_camera/points | sensor_msgs/msg/PointCloud2 |                 | 
+| /perseverance/odometry | nav_msgs/msg/Odometry |                 | 
+| /tf | tf2_msgs/msg/TFMessage |                 | 
 
 
 ## Enceladus
@@ -104,13 +106,15 @@ Launch the Enceladus demo with the following command:
 
 This world contains a submarine model.
 
-### ROS Topics
-* /submarine/buoyancy_engine
-* /submarine/left_thrust
-* /submarine/odometry
-* /submarine/right_thrust
-* /submarine/sonar
-* /submarine/sonar/points
+| Topic Name | Topic Type | Description | 
+| ---------- | ---------- | ----------- |
+| /submarine/buoyancy_engine | std_msgs/msg/Float64 |                 | 
+| /submarine/left_thrust | std_msgs/msg/Float64 |                 | 
+| /submarine/odometry | nav_msgs/msg/Odometry |                 | 
+| /submarine/right_thrust | std_msgs/msg/Float64 |                 | 
+| /submarine/sonar | sensor_msgs/msg/LaserScan |                 | 
+| /submarine/sonar/points | sensor_msgs/msg/PointCloud2 |                 | 
+
 
 
 ## Orbit
@@ -118,11 +122,12 @@ Launch the orbiter demo with the following command:
 
 ```ros2 launch spaceros_gz_demos orbit.launch.xml```
 
-This world contains a model of the International Space Station in orbit above the Earth
+This world contains a model of the International Space Station in orbit above the Earth.
 
-### ROS Topics
-* /capsule/lidar
-* /capsule/lidar/points
-* /capsule/thrust/pitch
-* /capsule/thrust/push
-* /capsule/thrust/yaw
+| Topic Name | Topic Type | Description | 
+| ---------- | ---------- | ----------- |
+| /capsule/lidar | sensor_msgs/msg/LaserScan |                 | 
+| /capsule/lidar/points | sensor_msgs/msg/PointCloud2 |                 | 
+| /capsule/thrust/pitch | std_msgs/msg/Float64 |                 | 
+| /capsule/thrust/push | std_msgs/msg/Float64 |                 | 
+| /capsule/thrust/yaw | std_msgs/msg/Float64 |                 | 
