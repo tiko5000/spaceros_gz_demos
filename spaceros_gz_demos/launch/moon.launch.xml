@@ -42,8 +42,6 @@
     <remap from="/world/moon/model/X1/link/base_link/sensor/front_laser/scan" to="/X1/front_laser/scan"/>
     <remap from="/world/moon/model/X1/link/base_link/sensor/front_laser/scan/points" to="/X1/front_laser/scan/points"/>
     <remap from="/world/moon/model/X1/link/base_link/sensor/imu_sensor/imu" to="/X1/imu_sensor/imu"/>
-    <remap from="/truus/attach" to="/X1/truss/attach"/>
-    <remap from="/truus/detach" to="/X1/truss/detach"/>
 
     <remap from="/model/X2/cmd_vel" to="/X2/cmd_vel"/>
     <remap from="/model/X2/odometry" to="/X2/odometry"/>
@@ -54,6 +52,10 @@
     <remap from="/world/moon/model/X2/link/base_link/sensor/front_laser/scan" to="/X2/front_laser/scan"/>
     <remap from="/world/moon/model/X2/link/base_link/sensor/front_laser/scan/points" to="/X2/front_laser/scan/points"/>
     <remap from="/world/moon/model/X2/link/base_link/sensor/imu_sensor/imu" to="/X2/imu_sensor/imu"/>
+
+    <remap from="/solar_panel_joint_cmd" to="/solar_panel/joint"/>
+    <remap from="/truss/attach" to="/X1/truss/attach"/>
+    <remap from="/truss/detach" to="/X1/truss/detach"/>
 
   </node>
 
