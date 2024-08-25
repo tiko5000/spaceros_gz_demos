@@ -1,6 +1,12 @@
 # spaceros_gz_demos
 
-This is a ROS 2 package demonstrating how to use Gazebo for robotic simulations in the Space ROS environment. The simulated worlds include a submersible robot on Enceladus, the Perseverance rover and Ingenuity helicopter on Mars, and swarm of construction rovers on the Moon. Gravity of each world is set to their actual values, and the Moon uses the Selenographic Coordinate System (SCS).
+
+
+https://github.com/user-attachments/assets/b5a11627-e0f3-451b-af0c-b0e76b30fb04
+
+
+
+This is a ROS 2 package demonstrating how to use Gazebo for robotic simulations in the Space ROS environment. The simulated worlds include a submersible robot on Enceladus, the Perseverance rover and Ingenuity helicopter on Mars, a space capsule docking to the ISS, and two rovers on the Moon. Gravity of each world is set to their actual values, and the Moon uses the Selenographic Coordinate System (SCS). Perseverance and Ingenuity models are meant to be as close to their real-life counterparts as possible.
 
 ## Docker setup
 
@@ -20,8 +26,8 @@ If you don't have docker, install it with `sudo apt install docker.io`. If you g
 
     ```./docker_shell.sh```
 
-## Running code in the docker container
-1. Once you are in the docker container, run `colcon build` (you should be in the `~/spaceros/ws` directory)
+## Running code in the Docker container
+1. Once you are in the Docker container, run `colcon build` (you should be in the `~/spaceros/ws` directory)
 
 2. Run `source install/setup.bash`
 
