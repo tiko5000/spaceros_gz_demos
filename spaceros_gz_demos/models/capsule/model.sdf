@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="capsule">
+    <link name="body">
+      <collision name="capsule_collision">
+        <geometry>
+          <mesh>
+            <uri>model://capsule/resources/capsule.glb</uri>
+            <scale>0.1 0.1 0.1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="capsule_visual">
+        <geometry>
+          <mesh>
+            <uri>model://capsule/resources/capsule.glb</uri>
+            <scale>0.1 0.1 0.1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
