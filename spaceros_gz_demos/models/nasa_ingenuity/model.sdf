@@ -185,7 +185,7 @@
         <parent>Body_MHS_BottomBlades_v16</parent>
         <child>Body_MHS_TopBlades_v16</child>
         <axis>
-            <xyz>0 0 1</xyz>
+            <xyz>0 0 -1</xyz>
             <limit>
                 <lower>-1e+16</lower>
                 <upper>1e+16</upper>
@@ -203,7 +203,7 @@
         <parent>Swashplate2</parent>
         <child>Body_MHS_BottomBlades_v16</child>
         <axis>
-            <xyz>0 0 1</xyz>
+            <xyz>0 0 -1</xyz>
             <limit>
                 <lower>-1e+16</lower>
                 <upper>1e+16</upper>
@@ -303,22 +303,22 @@
         filename="gz-sim-thruster-system"
         name="gz::sim::systems::Thruster">
         <joint_name>MHS_TopBlades_v16</joint_name>
-        <thrust_coefficient>0.001</thrust_coefficient>
+        <thrust_coefficient>0.0005</thrust_coefficient>
         <fluid_density>1</fluid_density>
         <propeller_diameter>1.2</propeller_diameter>
-        <max_thrust_cmd>0</max_thrust_cmd>
-        <min_thrust_cmd>-300</min_thrust_cmd>
+        <max_thrust_cmd>100</max_thrust_cmd>
+        <min_thrust_cmd>0</min_thrust_cmd>
     </plugin>
 
     <plugin
         filename="gz-sim-thruster-system"
         name="gz::sim::systems::Thruster">
         <joint_name>MHS_BottomBlades_v16</joint_name>
-        <thrust_coefficient>-0.001</thrust_coefficient>
+        <thrust_coefficient>-0.0005</thrust_coefficient>
         <fluid_density>1</fluid_density>
         <propeller_diameter>1.2</propeller_diameter>
-        <max_thrust_cmd>0</max_thrust_cmd>
-        <min_thrust_cmd>-300</min_thrust_cmd>
+        <max_thrust_cmd>100</max_thrust_cmd>
+        <min_thrust_cmd>0</min_thrust_cmd>
     </plugin>
 
     <plugin filename="gz-sim-linearbatteryplugin-system"
