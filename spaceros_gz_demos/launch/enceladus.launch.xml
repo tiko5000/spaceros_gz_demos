@@ -18,6 +18,8 @@
     <remap from="/model/submarine/joint/left_propeller_joint/cmd_thrust" to="/submarine/left_thrust"/>
     <remap from="/model/submarine/buoyancy_engine" to="/submarine/buoyancy_engine"/>
     <remap from="/model/submarine/odometry" to="/submarine/odometry"/>
+    <remap from="/sonar" to="/submarine/sonar"/>
+    <remap from="/sonar/points" to="/submarine/sonar/points"/>
   </node>
 
 
