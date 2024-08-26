@@ -1,12 +1,11 @@
 # spaceros_gz_demos
 
+This is a ROS 2 package demonstrating how to use Gazebo Harmonic for robotic simulations in the Space ROS environment. This package is meant to serve as a baseline for how to create Gazebo worlds, set them up with the appropriate plugins for sending controls and receiving data, and bridge these topics to ROS. The simulated worlds include a submersible robot on Enceladus, the Perseverance rover and Ingenuity helicopter on Mars, a space capsule docking to the ISS, and two rovers on the Moon. 
 
 
 https://github.com/user-attachments/assets/b5a11627-e0f3-451b-af0c-b0e76b30fb04
 
 
-
-This is a ROS 2 package demonstrating how to use Gazebo Harmonic for robotic simulations in the Space ROS environment. The simulated worlds include a submersible robot on Enceladus, the Perseverance rover and Ingenuity helicopter on Mars, a space capsule docking to the ISS, and two rovers on the Moon. Gravity of each world is set to their actual values, and the Moon uses the Selenographic Coordinate System (SCS). Perseverance and Ingenuity models are meant to be as close to their real-life counterparts as possible.
 
 ## Docker setup
 
@@ -41,6 +40,7 @@ Launch the moon demo with the following command:
 This world contains an X1 rover holding a truss that can be detached, an X2 rover, and a solar panel with one controllable joint on a lunar environment.
 Images, camera info, laser scans, point clouds, and odometry topics are provided for each robot.
 Additionally, each rover can be commanded as a differential drive system via a commanded base twist.
+This world uses the Selenographic Coordinate System (SCS). 
 
 
 <details>
@@ -86,6 +86,7 @@ The Ingenuity helicopter contains a rechargable battery that simulates it chargi
 Ingenuity can be commanded to fly.
 Perserverance can be commanded as a differential drive system, and its arm joints can also be commanded to move.
 Odometry topics are also published for both robots.
+Perseverance and Ingenuity models are meant to be as close to their real-life counterparts as possible.
 
 <details>
 <summary>Click here for information about the topics available in this demo.</summary>
