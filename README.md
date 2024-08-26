@@ -6,23 +6,23 @@ https://github.com/user-attachments/assets/b5a11627-e0f3-451b-af0c-b0e76b30fb04
 
 
 
-This is a ROS 2 package demonstrating how to use Gazebo for robotic simulations in the Space ROS environment. The simulated worlds include a submersible robot on Enceladus, the Perseverance rover and Ingenuity helicopter on Mars, a space capsule docking to the ISS, and two rovers on the Moon. Gravity of each world is set to their actual values, and the Moon uses the Selenographic Coordinate System (SCS). Perseverance and Ingenuity models are meant to be as close to their real-life counterparts as possible.
+This is a ROS 2 package demonstrating how to use Gazebo Harmonic for robotic simulations in the Space ROS environment. The simulated worlds include a submersible robot on Enceladus, the Perseverance rover and Ingenuity helicopter on Mars, a space capsule docking to the ISS, and two rovers on the Moon. Gravity of each world is set to their actual values, and the Moon uses the Selenographic Coordinate System (SCS). Perseverance and Ingenuity models are meant to be as close to their real-life counterparts as possible.
 
 ## Docker setup
 
-If you don't have docker, install it with `sudo apt install docker.io`. If you get a permission denied error with the Docker daemon, you will have to add yourself to the docker user group with `sudo usermod -aG docker $USER`, then run `newgrp docker`. You may have also to run `xhost +local:docker` on your first time. You will need to log out and log back in for these changes to take effect on your system.
+One time setup: If you don't have Docker, install it with `sudo apt install docker.io`. You will have to add yourself to the Docker user group with `sudo usermod -aG docker $USER`, then run `newgrp docker` to avoid permission errors with Docker daemon. You will also to run `xhost +local:docker` on your first time to allow Docker to connect to gui-based application such as Gazebo and RViz. You will need to log out and log back in for these changes to take effect on your system.
 
-1. Navigate to the `docker` directory
+2. Navigate to the `docker` directory
 
-2. Build the docker image locally with
+3. Build the Docker image locally with
 
     ```./docker_build.sh```
 
-3. Start the container with
+4. Start the Docker container with
 
     ```./docker_start.sh```
 
-4. Once you have a running container, to get another shell, run 
+5. Once you have a running container, to get another shell, run 
 
     ```./docker_shell.sh```
 
@@ -41,6 +41,11 @@ Launch the moon demo with the following command:
 This world contains an X1 rover holding a truss that can be detached, an X2 rover, and a solar panel with one controllable joint on a lunar environment.
 Images, camera info, laser scans, point clouds, and odometry topics are provided for each robot.
 Additionally, each rover can be commanded as a differential drive system via a commanded base twist.
+
+
+<details>
+<summary>Click here for information about the topics available in this demo.</summary>
+<br>
 
 | Topic Name | Topic Type | Description | 
 | ---------- | ---------- | ----------- |
@@ -66,6 +71,10 @@ Additionally, each rover can be commanded as a differential drive system via a c
 | /tf | tf2_msgs/msg/TFMessage | TF topic containing odometry from both the X1 and X2 | 
 
 
+</details>
+
+
+
 ## Mars
 Launch the mars demo with the following command:
 
@@ -76,6 +85,10 @@ The Ingenuity helicopter contains a rechargable battery that simulates it chargi
 Ingenuity can be commanded to fly.
 Perserverance can be commanded as a differential drive system, and its arm joints can also be commanded to move.
 Odometry topics are also published for both robots.
+
+<details>
+<summary>Click here for information about the topics available in this demo.</summary>
+<br>
 
 | Topic Name | Topic Type | Description | 
 | ---------- | ---------- | ----------- |
@@ -104,6 +117,8 @@ Odometry topics are also published for both robots.
 | /perseverance/odometry | nav_msgs/msg/Odometry | Odometry from Perserverance | 
 | /tf | tf2_msgs/msg/TFMessage | Topic containing odometry transforms for both robots | 
 
+</details>
+
 
 ## Enceladus
 Launch the Enceladus demo with the following command:
@@ -111,6 +126,11 @@ Launch the Enceladus demo with the following command:
 ```ros2 launch spaceros_gz_demos moon.launch.xml```
 
 This world contains a submarine model in a liquid ocean meant to simulate the surface of Encaledus.
+
+
+<details>
+<summary>Click here for information about the topics available in this demo.</summary>
+<br>
 
 | Topic Name | Topic Type | Description | 
 | ---------- | ---------- | ----------- |
@@ -121,7 +141,7 @@ This world contains a submarine model in a liquid ocean meant to simulate the su
 | /submarine/sonar | sensor_msgs/msg/LaserScan | Laser scan correspoinding to sonar points | 
 | /submarine/sonar/points | sensor_msgs/msg/PointCloud2 | Submarine's point cloud | 
 
-
+</details>
 
 ## Orbit
 Launch the orbiter demo with the following command:
@@ -130,6 +150,10 @@ Launch the orbiter demo with the following command:
 
 This world contains a model of the International Space Station in orbit above the Earth alongside a capsule that it can try to dock at.
 
+<details>
+<summary>Click here for information about the topics available in this demo.</summary>
+<br>
+
 | Topic Name | Topic Type | Description | 
 | ---------- | ---------- | ----------- |
 | /capsule/lidar | sensor_msgs/msg/LaserScan | Laser scan from capsule | 
@@ -137,3 +161,5 @@ This world contains a model of the International Space Station in orbit above th
 | /capsule/thrust/pitch | std_msgs/msg/Float64 | Control the pitch of the capsule | 
 | /capsule/thrust/push | std_msgs/msg/Float64 | Control the push of the capsule | 
 | /capsule/thrust/yaw | std_msgs/msg/Float64 | Control the yaw of the capsule | 
+
+</details>
