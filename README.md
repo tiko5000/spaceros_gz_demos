@@ -44,7 +44,7 @@ This world uses the Selenographic Coordinate System (SCS).
 
 
 <details>
-<summary>Click here for information about the topics available in this demo.</summary>
+<summary><b>Click here for information about the topics available in this demo.</b></summary>
 <br>
 
 | Topic Name | Topic Type | Description | 
@@ -89,7 +89,7 @@ Odometry topics are also published for both robots.
 Perseverance and Ingenuity models are meant to be as close to their real-life counterparts as possible.
 
 <details>
-<summary>Click here for information about the topics available in this demo.</summary>
+<summary><b>Click here for information about the topics available in this demo.</b></summary>
 <br>
 
 | Topic Name | Topic Type | Description | 
@@ -103,16 +103,16 @@ Perseverance and Ingenuity models are meant to be as close to their real-life co
 | ` /ingenuity/depth_camera ` | ` sensor_msgs/msg/Image ` |  Depth image from Ingenuity's camera  |
 | ` /ingenuity/depth_camera/points ` | ` sensor_msgs/msg/PointCloud2 ` |  Point cloud from Ingenuity's camera  |
 | ` /ingenuity/odometry ` | ` nav_msgs/msg/Odometry ` |  Odometry from Ingenuity  |
-| ` /ingenuity/swashplate_1/joint ` | ` std_msgs/msg/Float64 ` |  Used to tilt Ingenuity's propellers around the x axis  |
-| ` /ingenuity/swashplate_2/joint ` | ` std_msgs/msg/Float64 ` |  Used to tilt Ingenuity's propellers around the y axis  |
-| ` /perseverance/arm/joint_1 ` | ` std_msgs/msg/Float64 ` |  Command joint 1 on Perserverance's arm  |
-| ` /perseverance/arm/joint_2 ` | ` std_msgs/msg/Float64 ` |  Command joint 2 on Perserverance's arm  |
-| ` /perseverance/arm/joint_3 ` | ` std_msgs/msg/Float64 ` |  Command joint 3 on Perserverance's arm  |
-| ` /perseverance/arm/joint_4 ` | ` std_msgs/msg/Float64 ` |  Command joint 4 on Perserverance's arm  |
-| ` /perseverance/arm/joint_5 ` | ` std_msgs/msg/Float64 ` |  Command joint 5 on Perserverance's arm  |
+| ` /ingenuity/swashplate_1/joint ` | ` std_msgs/msg/Float64 ` |  Used to tilt Ingenuity's propellers around the x axis (range: -0.3 - 0.3)  |
+| ` /ingenuity/swashplate_2/joint ` | ` std_msgs/msg/Float64 ` |  Used to tilt Ingenuity's propellers around the y axis (range: -0.3 - 0.3)  |
+| ` /perseverance/arm/joint_1 ` | ` std_msgs/msg/Float64 ` |  Command joint 1 on Perserverance's arm (range: -3.14 - 3.14)  |
+| ` /perseverance/arm/joint_2 ` | ` std_msgs/msg/Float64 ` |  Command joint 2 on Perserverance's arm (range: -3.14 - 3.14)  |
+| ` /perseverance/arm/joint_3 ` | ` std_msgs/msg/Float64 ` |  Command joint 3 on Perserverance's arm (range: -3.14 - 3.14)  |
+| ` /perseverance/arm/joint_4 ` | ` std_msgs/msg/Float64 ` |  Command joint 4 on Perserverance's arm (range: -3.14 - 3.14)  |
+| ` /perseverance/arm/joint_5 ` | ` std_msgs/msg/Float64 ` |  Command joint 5 on Perserverance's arm (range: -3.14 - 3.14)  |
 | ` /perseverance/camera ` | ` sensor_msgs/msg/Image ` |  Image from Perserverance's camera  |
 | ` /perseverance/camera_info ` | ` sensor_msgs/msg/CameraInfo ` |  Camera info from Perserverance's camera  |
-| ` /perseverance/camera_yaw ` | ` std_msgs/msg/Float64 ` |  Used to tilt Perserverance's camera around the yaw/azimuth  |
+| ` /perseverance/camera_yaw ` | ` std_msgs/msg/Float64 ` |  Used to tilt Perserverance's camera around the yaw/azimuth (range: 0 to 6.28) |
 | ` /perseverance/cmd_vel ` | ` geometry_msgs/msg/Twist ` |  Used to command Perserverance's base velocity  |
 | ` /perseverance/depth_camera ` | ` sensor_msgs/msg/Image ` |  Depth image from Perserverance's camera  |
 | ` /perseverance/depth_camera/points ` | ` sensor_msgs/msg/PointCloud2 ` |  Point cloud from Perserverance's camera  |
@@ -132,12 +132,12 @@ This world contains a submarine model in a liquid ocean meant to simulate the su
 
 
 <details>
-<summary>Click here for information about the topics available in this demo.</summary>
+<summary><b>Click here for information about the topics available in this demo.</b></summary>
 <br>
 
 | Topic Name | Topic Type | Description | 
 | ---------- | ---------- | ----------- |
-| ` /submarine/buoyancy_engine ` | ` std_msgs/msg/Float64 ` |  Used to determine the volume of air in the buoyancy engine, which will either lower or raise the submarine.  |
+| ` /submarine/buoyancy_engine ` | ` std_msgs/msg/Float64 ` |  Used to determine the volume of air in the buoyancy engine, which will either lower or raise the submarine (range: -30.0 - 30.0) |
 | ` /submarine/left_thrust ` | ` std_msgs/msg/Float64 ` |  Control the left thruster  |
 | ` /submarine/right_thrust ` | ` std_msgs/msg/Float64 ` |  Control the right thruster  |
 | ` /submarine/odometry ` | ` nav_msgs/msg/Odometry ` |  Odometry of the submarine  |
@@ -155,7 +155,7 @@ Launch the orbiter demo with the following command:
 This world contains a model of the International Space Station in orbit above the Earth alongside a capsule that it can try to dock at.
 
 <details>
-<summary>Click here for information about the topics available in this demo.</summary>
+<summary><b>Click here for information about the topics available in this demo.</b></summary>
 <br>
 
 | Topic Name | Topic Type | Description | 
