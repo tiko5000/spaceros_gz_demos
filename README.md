@@ -12,17 +12,17 @@ This is a ROS 2 package demonstrating how to use Gazebo Harmonic for robotic sim
 
 One time setup: If you don't have Docker, install it with `sudo apt install docker.io`. You will have to add yourself to the Docker user group with `sudo usermod -aG docker $USER`, then run `newgrp docker` to avoid permission errors with Docker daemon. You will also to run `xhost +local:docker` on your first time to allow Docker to connect to gui-based application such as Gazebo and RViz. You will need to log out and log back in for these changes to take effect on your system.
 
-2. Navigate to the `docker` directory
+1. Navigate to the `docker` directory
 
-3. Build the Docker image locally with
+2. Build the Docker image locally with
 
     ```./docker_build.sh```
 
-4. Start the Docker container with
+3. Start the Docker container with
 
     ```./docker_start.sh```
 
-5. Once you have a running container, to get another shell, run 
+4. Once you have a running container, to get another shell, run 
 
     ```./docker_shell.sh```
 
