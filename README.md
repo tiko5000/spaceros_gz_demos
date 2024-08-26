@@ -170,3 +170,17 @@ Laser scan and point cloud data is also provided.
 
 
 </details>
+
+## Additional Information
+
+### Installing Outside of Docker
+If you would like to install this package outside of Docker, you can follow the instructions below. Note that you will need to have ROS 2 installed on your system.
+1. Install Gazebo Harmonic and ROS 2 Gazebo packages by following the instructions [here](https://gazebosim.org/docs/latest/ros_installation/).
+    - Pay special attention to the compatibility of the ROS 2 version with Gazebo Harmonic and additional packages for ROS 2 that you'll need to install.
+2. Clone this repository into your ROS 2 workspace in the `src` directory.
+3. Run `colcon build` in the root of your workspace.
+4. Source the setup file with `source install/setup.bash`.
+5. Start one of the demos with `ros2 launch spaceros_gz_demos moon.launch.xml`, `mars.launch.xml`, `enceladus.launch.xml`, or `orbit.launch.xml`.
+
+### Getting Visualizations in Gazebo
+If you would like to visualize camera image feeds or laser scans in Gazebo, you can add an Image Display or Visualize Lidar plugin to the Gazebo GUI from the top right menu. You can then select the topic you would like to visualize from the plugin's menu.
