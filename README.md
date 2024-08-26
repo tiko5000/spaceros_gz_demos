@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/b5a11627-e0f3-451b-af0c-b0e76b30fb04
 
 One time setup: If you don't have Docker, install it with `sudo apt install docker.io`. You will have to add yourself to the Docker user group with `sudo usermod -aG docker $USER`, then run `newgrp docker` to avoid permission errors with Docker daemon. You will also to run `xhost +local:docker` on your first time to allow Docker to connect to gui-based application such as Gazebo and RViz. You will need to log out and log back in for these changes to take effect on your system.
 
-1. Navigate to the `docker` directory
+1. Navigate to the `docker` directory.
 
 2. Build the Docker image locally with
 
@@ -30,7 +30,7 @@ One time setup: If you don't have Docker, install it with `sudo apt install dock
 
 2. Run `source install/setup.bash`
 
-3. Start one of the demos with `ros2 launch spaceros_gz_demos moon.launch.xml`, `mars.launch.xml`, or `enceladus.launch.xml`
+3. Start one of the demos with `ros2 launch spaceros_gz_demos moon.launch.xml`, `mars.launch.xml`, `enceladus.launch.xml`, or `orbit.launch.xml`.
 
 ## Moon
 Launch the moon demo with the following command:
