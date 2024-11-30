@@ -2,7 +2,7 @@
 
 This is a ROS 2 package demonstrating how to use Gazebo Harmonic for robotic simulations in the Space ROS environment. This package is meant to serve as a baseline for how to create Gazebo worlds, set them up with the appropriate plugins for sending controls and receiving data, and bridge these topics to ROS. The simulated worlds use realistic gravity and include a submersible robot on Enceladus, the Perseverance rover and Ingenuity helicopter on Mars, a space capsule docking to the ISS, and two rovers on the Moon.
 
-This package was made by David Dorf and Katie Hughes for the NASA Space ROS Sim Summer Sprint Challenge 
+This package was made by David Dorf and Katie Hughes for the NASA Space ROS Sim Summer Sprint Challenge. The relevant PR in the Space ROS demos repository is [here](https://github.com/space-ros/demos/pull/33).
 
 
 https://github.com/user-attachments/assets/b5a11627-e0f3-451b-af0c-b0e76b30fb04
