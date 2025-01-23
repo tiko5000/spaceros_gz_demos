@@ -81,7 +81,7 @@ This world uses the Selenographic Coordinate System (SCS).
 ## Mars
 Launch the mars demo with the following command:
 
-```ros2 launch spaceros_gz_demos moon.launch.xml```
+```ros2 launch spaceros_gz_demos mars.launch.xml```
 
 This world contains models of the Perseverance rover and the Ingenuity helicopter on a Martian surface.
 The Ingenuity helicopter contains a rechargable battery that simulates it charging from its solar panel.
@@ -128,7 +128,7 @@ Perseverance and Ingenuity models are meant to be as close to their real-life co
 ## Enceladus
 Launch the Enceladus demo with the following command:
 
-```ros2 launch spaceros_gz_demos moon.launch.xml```
+```ros2 launch spaceros_gz_demos enceladus.launch.xml```
 
 This world contains a submarine model in a liquid ocean meant to simulate the surface of Encaledus.
 The submarine has sonar and odometry topics, and has a buoyancy engine that allows it to rise or sink, in addition to commandable thrusters on its left and right sides.
